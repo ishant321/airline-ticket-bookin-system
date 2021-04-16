@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div id="parent">
+        <section class="body"></section>
+        <div class="overlay"></div>
+    </div>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="welcome.html">Home</a></li>
+            <li class="item"><a href="">Services</a></li>
+            <li class="item"><a href="">About&nbspus</a></li>
+            <li class="item"><a href="">Contact&nbspus</a></li>
+        </ul>
+    </nav>
+    </div>
+
+
+    <div id="register">
+        <div class="title"><h1><u>Register</u></h1></div>
+      <form action="connect.jsp" method="post">
+        <div id="reg">
+            <div class="box">
+            <span class="details">Full name</span>   
+            <input type="text" placeholder="Enter your name" class="textbox" name="name">
+            </div>
+        
+            <div class=" box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your Email" class="textbox" name="mail">
+            </div>
+            
+            <div class="box">
+            <span class="details">Mobile Number</span>
+            <input type="text" placeholder="Enter your mob number" class="textbox" name="number">
+            </div>
+            <div class="box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter a Username" class="textbox" name="username">
+            </div>
+        
+            <div class="box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" class="textbox" name="password">
+            </div>
+            
+            <div class="box">
+            <span class="details">Confirm password</span>
+            <input type="password" placeholder="Enter your password again" class="textbox" name="confirmpassword">
+            </div>
+           
+
+            <div class="box">
+            <span id="title ">Gender</span>
+
+            <label class="container">
+            <input type="radio" name="gender" value="m">Male
+           
+            <input type="radio" name="gender" value="f">Female
+            
+            <input type="radio" name="gender" value="o">Others
+            </label>
+        
+            </div>
+
+            <a href="" ><input id="button" type="submit" value="register"></a>
+        </form>
+    
+</body>
+</html>
