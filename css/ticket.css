@@ -8,7 +8,7 @@
 
 /* navigation bar */
 .body{
-    background: url('aeroplane.jpg');
+    background: url('/image/aeroplane.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -87,6 +87,7 @@
      flex-direction: column;
      top: 0;
      margin: 100px 36% 0px 43%;
+    
  }
 
  #form h1{
@@ -273,7 +274,7 @@
     background-color: rgb(0, 162, 173) ;
 }
 
-.box{
+.boxticket{
     border: 2px solid rgb(37, 37, 170);
     margin-left: 0px;border: 2px solid rgb(37, 37, 170);
     margin-left: -258px;

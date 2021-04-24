@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/register.js"></script>
+</head>
+<body>
+    <div id="parent">
+        <section class="body"></section>
+        <div class="overlay"></div>
+    </div>
+    <nav id="navbar">
+
+        <ul>
+            <li class="item"><a href="welcome.html">Home</a></li>
+            <li class="item"><a href="service.html">Services</a></li>
+            <li class="item"><a href="about.html">About&nbspus</a></li>
+            <li class="item"><a href="contact.html">Contact&nbspus</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    
+    <form action=" " onsubmit="return validation()">
+    <div id="register5">
+        <div class="title5"><h1><u>Register</u></h1></div>
+
+
+        <div id="reg">
+            
+            <div class="box">
+            <span class="details">Full name</span>   
+            <input type="text" placeholder="Enter your name" class="textbox" autocomplete="off" id="name">
+            <span id="nameerror" class="error"></span>
+            </div>
+        
+            <div class=" box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your Email" class="textbox" id="mail" autocomplete="off">
+            <span id="mailerror" class="error"></span>
+            </div>
+            
+            <div class="box">
+            <span class="details">Mobile Number</span>
+            <input type="text" placeholder="Enter your mob number" class="textbox" id="mobnumber" autocomplete="off">
+            <span id="moberror" class="error"></span>
+            </div>
+
+            <div class="box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter a Username" class="textbox" id="uname" autocomplete="off">
+            <span id="usernameerror" class="error"></span>
+            </div>
+        
+            <div class="box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" class="textbox" id="pass" autocomplete="off">
+            <span id="passworderror" class="error"></span>
+            </div>
+            
+            <div class="box">
+            <span class="details">Confirm password</span>
+            <input type="password" placeholder="Enter your password again" class="textbox" id="cpass" autocomplete="off">
+            <span id="conpassworderror" class="error"></span>
+            </div>
+           
+
+            <div class="box">
+            <span id="title">Gender</span>
+
+            <label class="container">
+            <input type="radio" name="radio">Male
+           
+            <input type="radio" name="radio">Female
+            
+            <input type="radio" name="radio">Others
+            </label>
+        
+            </div>
+
+            <a href="" ><input id="button"  type="submit" value="register"></a>
+        </form>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,673 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* css variables */
+
+/* navigation bar */
+.body{
+    background: url('/image/aeroplane.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 657px;
+}
+
+
+.overlay{
+    background: rgba(0, 0, 0, 0.836); 
+    width: 100%;
+    height: 657px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+  
+
+#navbar{
+    
+    display: flex; 
+    position: absolute;
+    top: 0;
+    width:99%;
+    margin: 10px 0px 5px 3px;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid coral;
+    border-radius: 0px 0px 100px 100px ;
+}
+
+#navbar ul{
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+   padding: 5px 100px 5px 100px;
+    margin: 0px 0px 0px 0px;
+   
+}
+
+#navbar ul li{
+   color: black;
+   list-style-type: none;
+   font-size: 1.1rem;
+   padding: 10px 5px;
+   align-items: center;
+}
+
+#navbar ul li a{
+   color: rgb(0, 0, 0); 
+   display:inline;
+   padding: 2px 30px;
+   border: 1px solid;
+   border-radius: 10px;
+   border-color: rgb(231, 90, 34);
+   text-decoration: none;
+ }
+
+ #navbar ul li a:hover{
+  color: white;
+  background-color: rgb(0, 0, 0);
+ }
+
+ /* home section */
+
+ #home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+     display: flexbox;
+     padding: 100px;
+     padding-bottom: 0px;
+     justify-content: center;
+     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     color: rgb(233, 54, 54);
+     font-size: 80px;
+     text-align: center;
+ }
+
+ /* logo section */
+
+ #logo{
+     display: block;
+     position: absolute;
+    top: 0;
+     margin: 225px 450px;
+ }
+ #logo img{
+   height: 200px;
+   width: 400px;
+   text-align: center;
+   justify-content: center;
+}
+ 
+/* login section */
+
+#ln{
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
+
+#loginfirst{
+    outline: none;
+    position: absolute;
+    top: 0;
+    border: 5px solid deepskyblue;
+    border-radius: 100px 0px 0px 100px;
+    height: 100px;
+    margin: 450px 70px;
+    width: 500px;
+    font-size: 3rem;
+    text-emphasis-color: blue;
+    background-color: rgb(233, 79, 33);
+    opacity: .8;
+}
+#registerfirst{
+    outline: none;
+    position: absolute;
+    top: 0px;
+    border: 5px solid deepskyblue;
+    border-radius: 0px 100px 100px 0px;
+    height: 100px;
+    margin: 450px 780px;
+    width: 500px;
+    font-size: 3rem;
+    background-color: rgb(233, 79, 33);
+    opacity: .8;
+}
+
+#registerfirst:hover{
+   
+   font-size: 3.1rem;
+   border: 6px solid deepskyblue;
+}
+
+#loginfirst:hover{
+   
+    font-size: 3.1rem;
+    border: 6px solid deepskyblue;
+ }
+
+.covid{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top: 600px;
+    background-color: rgb(160, 154, 154);
+}
+
+#guideline{
+    color: red;
+    font-size: 22px;
+    margin: 10px 0px 10px 10px;
+}
+
+
+
+/* --------------------------------------------------last------------------------------------------------- */
+
+.last{
+     display: flex;
+     margin-left: 5px;
+     margin-right: 5px;
+
+     align-items: center;
+     justify-content: center;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     background-color: teal;
+     width: 99%;
+}
+
+#c1{
+    margin-right: 5px;
+    padding: 90px;
+    padding-top: 0px;
+    border: 2px solid;
+    width: 10%;
+    height: 200px;
+}
+     
+#c2{
+    margin-right: 5px;
+    padding: 90px;
+    padding-top: 0px;
+    border: 2px solid;
+    width: 10%;
+    height: 200px;
+}
+ 
+#c3{
+    margin-right: 5px;
+    padding: 90px;
+    padding-top: 0px;
+    border: 2px solid;
+    width: 10%;
+    height: 200px;
+}
+ 
+#c4{
+    
+    padding: 90px ;
+    padding-top: 0px;
+    border: 2px solid;
+    width: 10%;
+    height: 200px;
+}
+
+.plan{
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 0px 100px 100px 0px;
+    background-color: teal;
+    margin-left: 5px;
+}
+
+
+/* -----------------------------------------------------------LOG IN------------------------------------------------------- */
+
+#login{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 31%;
+     border: 2px solid ;
+     background-color: rgba(240, 168, 34, 0.164);
+     border-radius: 10px;
+     font-size: 25px;
+     box-shadow: 0px 0px 25px 0px;
+ }
+ #username{
+     margin: 15px 30px 15px 30px;
+     padding: 10px 120px 10px 5px;
+     border-radius: 15px;
+     border: 2px solid ;
+     box-shadow: 0px 0px 10px 0px;
+     font-size: 20px;
+     background: transparent;
+ }
+
+ #password{
+    margin: 10px 30px 10px 30px;
+    padding: 10px 120px 10px 5px;
+    border-radius: 15px;
+    border: 2px solid;
+    box-shadow: 0px 0px 10px 0px;
+    font-size: 20px;
+    background: transparent;
+}
+
+#btn{
+    margin: 15px 30px 15px 30px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 15px;
+    border: 2px solid;
+    box-shadow: 0px 0px 10px 0px;
+    font-size: 20px;
+    background: transparent;
+    color: rgb(112, 255, 255);
+}
+
+#username:hover{
+    box-shadow: none;
+}
+
+#password:hover{
+    box-shadow: none;
+}
+
+#btn:hover{
+    box-shadow: none;
+}
+
+#sign{
+    color:white;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+#sign a{
+    color: black;
+}
+#sign a:hover{
+     color:rgb(255, 154, 60)
+}
+
+
+
+/* -------------------------------------------------------REGISTER---------------------------------------------------------- */
+
+
+#register5{
+    position: absolute;
+    border: 3px solid;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 450px;
+    z-index: 1;
+    box-shadow: 0px 0px 20px 0px;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.title5{
+    text-align: center;
+    color:rgb(231, 90, 34);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+#reg{
+   display: flex;
+   flex-wrap: wrap;
+  padding-left: 110px;
+  padding-top: 20px;
+  font-size: 20px;
+  
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    color: rgb(231, 90, 34);
+    background-color: transparent;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box .details{
+    text-align: left;
+    padding-left: 0px;
+}
+
+.container {
+   word-spacing: 10px;
+  
+}
+
+
+.textbox{
+    border: 3px solid rgb(211, 208, 208);
+    border-radius: 10px;
+    padding: 10px 60px 10px 5px;
+    background-color: transparent;
+    box-shadow: 0px 0px 4px 0px;
+    color: white;
+    outline: none;
+}
+
+.textbox:hover{
+    box-shadow: none;
+   
+}
+
+
+#button{
+   border: 2px solid rgb(211, 208, 208);
+    border-radius: 10px;
+    background-color: rgb(18, 150, 18);
+    height: 30px;
+    width: 150px;
+    margin: 40px 0px 0px 317px;
+    box-shadow: 0px 0px 30px 0px;
+    padding-bottom: 3px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    outline: none;
+}
+
+#button:hover{
+   box-shadow:  0px 0px 50px 0px;
+   background-color: white;
+}
+
+.tbox:hover{
+   background-color: rgb(18, 150, 18);
+}
+
+.error{
+    color: red;
+    font-size: 13px;
+}
+
+
+/* -----------------------------------------------------------TICKET BOOKING--------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------PAYMENT------------------------------------------------------------ */
+
+
+
+.payment{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    left: 34%;
+    color: white;
+}
+
+.payment h1{
+    text-align: center;
+}
+
+.payment h2{
+   text-decoration: underline;
+}
+
+.payment2{
+   border: 2px solid white;
+   padding: 10px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 20px 0px black;
+}
+
+.payment3{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+#card{
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    outline: none;
+    background-color: transparent;
+    padding: 10px 200px 10px 5px;
+}
+#card:hover{
+   box-shadow: 0px 0px 20px 0px black;  
+}
+
+
+#date{
+   border: 2px solid burlywood;
+   border-radius: 10px;
+   outline: none;
+   background-color: transparent;
+   padding: 10px 0px 10px 5px;
+   margin-right: 196px;
+}
+#date:hover{
+   box-shadow: 0px 0px 20px 0px black;  
+}
+
+
+#cv{
+   border: 2px solid burlywood;
+   border-radius: 10px;
+   outline: none;
+   background-color: transparent;
+   padding: 10px 0px 10px 5px;
+   margin-left: 189px;
+}
+
+#cv:hover{
+   box-shadow: 0px 0px 20px 0px black;  
+}
+
+
+#cvcode{
+   margin-left: 189px;
+   margin-top: -69px;
+}
+
+#cvcode:hover{
+   box-shadow: 0px 0px 20px 0px black;  
+}
+
+
+#code{
+   border: 2px solid burlywood;
+   border-radius: 10px;
+   outline: none;
+   background-color: transparent;
+   padding: 10px 0px 10px 5px;
+}
+
+#code:hover{
+   box-shadow: 0px 0px 20px 0px black;  
+}
+
+
+#btn{
+   padding: 10px;
+   border: 1px solid green;
+   border-radius: 13px;
+   background-color: green;
+   font-size: 20px;
+   outline: none;
+}
+
+/* ------------------------------------------------SERVICES----------------------------------------- */
+ 
+
+.service{
+    position: absolute;
+    margin-top: 200px;
+    
+}
+.service p{
+    font-size: 68px;
+    color:burlywood;
+    
+}
+
+
+.section100{
+    display: flex;
+    margin: 30px;
+    position: absolute;
+    margin-left: -527px;
+}
+
+#fst{
+    border: transparent;
+    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    margin: 10px;
+    height: 360px;
+    width: 300px;
+    
+}
+
+#scnd{
+    border: transparent;
+    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    margin: 10px;
+    height: 360px;
+    width: 300px;
+   
+}
+
+#thrd{
+    border: transparent;
+    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    margin: 10px;
+    height: 360px;
+    width: 300px;
+    
+}
+#frth{
+    border: transparent;
+    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    margin: 10px;
+    height: 360px;
+    width: 300px;
+    
+}
+.titl{
+    color: rgb(46, 154, 173);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}
+
+.img{
+    height: 130px;
+    width: 150px;
+    position: absolute;
+    margin-top: 0;
+    padding-left: 74px;
+}
+
+#medikit{
+    height: 80px;
+    width: 100px;
+    padding-top: 20px;
+    padding-left: 93px;
+}
+
+#gift{
+    height: 70px;
+    width: 83px;
+    padding-top: 20px;
+    padding-left: 105px;
+}
+
+#group{
+    height: 70px;
+    width: 83px;
+    padding-top: 20px;
+    padding-left: 105px;
+}
+.explanation{
+    color: cornsilk;
+    font-family:'Courier New', Courier, monospace;
+    position: relative;
+    display: flex;
+    margin-top: 210px;
+}
+
+
+/* -----------------------------------------------ABOUT US----------------------------------------------------- */
+
+.about{
+    position: absolute;
+    top: 150px;
+    color:rgb(160, 154, 154);
+    display: flex;
+    flex-direction: row;
+    margin-left: -5px;
+}
+
+.about h1{
+    text-decoration: underline;
+    text-decoration-style:dashed;
+    color:rgb(192, 135, 49);
+}
+
+.parts{
+    margin: 30px;
+}
+
+#element1{
+    display: inline-block;
+    margin: 10px 10px 0px 0px;
+    padding: 10px 10pxx 10px 10px;
+    height: 380px;
+    width: 600px;
+    border: 5px solid transparent;
+    box-shadow: 0px 0px 10px 0px rgba(192, 135, 49, 0.466);
+}
+
+#element2{
+    margin: 10px -70px 0px 10px;
+    padding: 10px 0px 10px 20px;
+    height: 360px;
+    width: 600px;
+    border: 5px solid transparent;
+    box-shadow: 0px 0px 10px 0px rgba(192, 135, 49, 0.466);
+}
+
+
+
+/* ---------------------------------------------------CONTACT US------------------------------------------------ */
+
+
+.contactus{
+    position: absolute;
+    top: 0;
+    margin-left: 165px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    
+}
+
+.contactus h1::first-letter{
+   color: red;
+ }
