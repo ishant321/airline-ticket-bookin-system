@@ -11,81 +11,121 @@
 <body>
     <div id="parent">
         <section class="body"></section>
-        <div class="overlay"></div>
-    </div>
-    <nav id="navbar">
+         <div class="overlay"></div>
+         </div>
+         <nav id="navbar">
+             <div id="searchbar">
+                 <input type="text" placeholder="SEARCH YOUR FLIGHT">
+             </div>
+     
+             <ul>
+                 <li class="item"><a href="index.html">HOME</a></li>
+                 <li class="item"><a href="service.html">SERVICES</a></li>
+                 <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
+                 <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
+             </ul> 
+         </nav>
 
-        <ul>
-            <li class="item"><a href="welcome.html">Home</a></li>
-            <li class="item"><a href="service.html">Services</a></li>
-            <li class="item"><a href="about.html">About&nbspus</a></li>
-            <li class="item"><a href="contact.html">Contact&nbspus</a></li>
-        </ul>
-    </nav>
-    </div>
+         <div class="registerlayer">
+             <div class="registercolorlayer"></div>
+             <img src="image/registerlayer.jpg" alt="image not found">
+         </div>
+         
 
-    
-    <form action=" " onsubmit="return validation()">
-    <div id="register5">
-        <div class="title5"><h1><u>Register</u></h1></div>
+    <form action="connect.jsp" onsubmit="return validation()" method="post">
+    <div  id="register5">
 
 
         <div id="reg">
             
             <div class="box">
             <span class="details">Full name</span>   
-            <input type="text" placeholder="Enter your name" class="textbox" autocomplete="off" id="name">
+            <input type="text" placeholder="Enter your name" class="textbox" autocomplete="off" id="name" name="name">
             <span id="nameerror" class="error"></span>
             </div>
         
             <div class=" box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your Email" class="textbox" id="mail" autocomplete="off">
+            <input type="text" placeholder="Enter your Email" class="textbox" id="mail" autocomplete="off" name="mail">
             <span id="mailerror" class="error"></span>
             </div>
             
             <div class="box">
             <span class="details">Mobile Number</span>
-            <input type="text" placeholder="Enter your mob number" class="textbox" id="mobnumber" autocomplete="off">
+            <input type="text" placeholder="Enter your mob number" class="textbox" id="mobnumber" autocomplete="off" name="number">
             <span id="moberror" class="error"></span>
-            </div>
-
-            <div class="box">
-            <span class="details">Username</span>
-            <input type="text" placeholder="Enter a Username" class="textbox" id="uname" autocomplete="off">
-            <span id="usernameerror" class="error"></span>
             </div>
         
             <div class="box">
             <span class="details">Password</span>
-            <input type="password" placeholder="Enter your password" class="textbox" id="pass" autocomplete="off">
+            <input type="password" placeholder="Enter your password" class="textbox" id="pass" autocomplete="off" name="password">
             <span id="passworderror" class="error"></span>
             </div>
             
             <div class="box">
             <span class="details">Confirm password</span>
-            <input type="password" placeholder="Enter your password again" class="textbox" id="cpass" autocomplete="off">
+            <input type="password" placeholder="Enter your password again" class="textbox" id="cpass" autocomplete="off" name="confirmpassword">
             <span id="conpassworderror" class="error"></span>
             </div>
            
 
-            <div class="box">
-            <span id="title">Gender</span>
+            <div class="box" id="titleg">
+            <span >Gender</span>
 
             <label class="container">
-            <input type="radio" name="radio">Male
+            <input type="radio" name="gender" value="m">Male
            
-            <input type="radio" name="radio">Female
+            <input type="radio" name="gender" value="f">Female
             
-            <input type="radio" name="radio">Others
+            <input type="radio" name="gender" value="o">Others
             </label>
         
             </div>
 
-            <a href="" ><input id="button"  type="submit" value="register"></a>
+            <div class="box"><a href="" ><input id="button" type="submit" value="Register"></div>
+            </div>
+            </div>
         </form>
     
 
+        <div class="registerpatch"></div>
+<!-- ---------------------------------------------FOOTER----------------------------------------------- -->
+
+<div class="footer">
+
+    <div class="footercontent">
+
+        <div id="footerfirst">
+            <h2>Get Help</h2>
+                <ul>
+                <a href="service.html"><li>Services</li></a>
+                <a href="about.html"><li>About Us</li></a>
+                <a href="contact.html"><li>Contact Us</li></a>
+                </ul>
+        </div>
+
+        <div id="footersecond">
+            <h2>Social Media</h2>
+               <ul>
+               <a href="contact.html"><li>Instagram</li></a>
+               <a href="contact.html"><li>Facebook</li></a>
+               <a href="contact.html"><li>YouTube</li></a>
+               <a href="contact.html"><li>Twitter</li></a>
+               </ul>
+    </div> 
+
+    <div class="paymentfooter">
+        <h2>Payment Methods</h2>
+            <div id="message">
+                 Your data security and privacy is our responsibility
+            </div>
+
+            <div id="paymenticons">
+                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/gpay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/credit.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/paytm.png" alt="image not available">
+            </div>
+    </div>
+</div>
+</div>
 
 </body>
 </html>

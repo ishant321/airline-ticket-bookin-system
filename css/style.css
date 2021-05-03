@@ -13,11 +13,12 @@
     background-size: cover;
     width: 100%;
     height: 657px;
+  
 }
 
 
 .overlay{
-    background: rgba(0, 0, 0, 0.836); 
+    background: #09464dea; 
     width: 100%;
     height: 657px;
     position: absolute;
@@ -32,23 +33,20 @@
     display: flex; 
     position: absolute;
     top: 0;
-    width:99%;
-    margin: 10px 0px 5px 3px;
+    width:98%;
+    margin: 10px 10px 0px 10px;
     z-index: 1;
     align-items: center;
     justify-content: center;
-    border: 1px solid coral;
-    border-radius: 0px 0px 100px 100px ;
+    background-color: rgba(0, 0, 0, 0.514);
+    border: 2px solid black
 }
 
 #navbar ul{
-    background-color: coral;
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 45px;
-   padding: 5px 100px 5px 100px;
-    margin: 0px 0px 0px 0px;
+    padding: 10px 15px 5px 15px;
+    margin: 0px 0px 0px 700px;
    
 }
 
@@ -56,56 +54,254 @@
    color: black;
    list-style-type: none;
    font-size: 1.1rem;
-   padding: 10px 5px;
+   padding: 10px 20px 10px 20px;
    align-items: center;
 }
 
-#navbar ul li a{
-   color: rgb(0, 0, 0); 
+#navbar ul li a{             
+   color: rgb(255, 255, 255); 
    display:inline;
-   padding: 2px 30px;
-   border: 1px solid;
-   border-radius: 10px;
-   border-color: rgb(231, 90, 34);
    text-decoration: none;
+   font-size: 13px;
+   border: 1px solid transparent;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   padding: 5px;
+   position: relative;
  }
 
- #navbar ul li a:hover{
-  color: white;
-  background-color: rgb(0, 0, 0);
+ #navbar ul li a:before{
+    transition: 0.5s all ease-out;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #09464dea;
  }
 
+ #navbar ul li a:hover:before{
+    transition: 0.5s all ease;;
+    top:0;
+    opacity: 1;
+    z-index: -1;
+  
+ }
+
+ #searchbar {
+     position: absolute;
+     margin-left: 30px;
+     border: none;
+     left: 0;
+     margin-left: 30px;
+ }
+ #searchbar input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    size: 50px;
+    width: 300px;
+    color: white;
+ }
+
+ #searchbar input::placeholder{
+    color: rgba(255, 255, 255, 0.452);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ #searchbar input:hover{
+    border-bottom: 1px solid #09464dea;
+ }
+
+ 
  /* home section */
 
  #home{
+     position: absolute;
+    border-left: 3px solid black;
+    z-index: 2;
+    height: 353px;
+    margin-top: -501px;
+    margin-left: 30px;
+    }
+
+
+ #welcome{
+      position: absolute;
+      color: #FF9933;
+      margin-top: -496px;
+      margin-left: 35px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 80px;
+ }
+
+ #to50{
+    position: absolute;
+    color: white;
+    margin-top: -397px;
+    margin-left: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+#indian{
+    position: absolute;
+    color: white;
+    margin-top: -330px;
+    margin-left: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+}
+
+#airlines{
+    position: absolute;
+    color: #1ebb10;
+    margin-top: -247px;
+    margin-left: 37px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90px;
+}
+
+.welcomeboxticket{
+    z-index: 3;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-     display: flexbox;
-     padding: 100px;
-     padding-bottom: 0px;
-     justify-content: center;
-     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-     color: rgb(233, 54, 54);
-     font-size: 80px;
-     text-align: center;
- }
-
- /* logo section */
-
- #logo{
-     display: block;
-     position: absolute;
-    top: 0;
-     margin: 225px 450px;
- }
- #logo img{
-   height: 200px;
-   width: 400px;
-   text-align: center;
-   justify-content: center;
+    margin-top: 170px;
+    margin-left: 675px;
+    border: 2px solid black;
+    padding: 10px;
+    height: 200px;
+    width: 610px;
+    background-color: rgba(255, 255, 255, 0.11);
 }
+
+
+#faresystem2{
+    display: flex;
+    flex-direction: row;
+    margin: 21px 0px 20px 122px;
+    font-size: 20px;
+}
+
+#faresystem2 input{
+   margin-top: 5px;
+}
+
+#faresystem2 p{
+    margin-right: 10px;
+}
+
+
+
+
+.first20{
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    margin: 10px;
+    margin-right: 0px;
+    width:  297px;
+}
+
+.first20::placeholder{
+    color: black;
+    font-size: 15px;
+}
+
+.box20{
+    margin: 36px 0px 0px -9px;   
+}
+
+.box30{
+    margin: 39px 0px 0px 0px;
+    height: 40px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.box30:before{
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #09464dea;
+}
+
+.box30:hover:before{
+    transition: 0.3s all ease;;
+    left:0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+
+#btn12{
+    background-color: transparent;
+    border: none;
+    margin: 4px 0px 0px 228px;
+    font-size: 27px
+}
+
+
+.welcometicket{
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    position: absolute;
+    margin: -264px 0px 0px 646px;
+  
+    
+}
+
+.part{
+    padding: 10px;
+    height: 65px;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.514);
+    border: 2px solid black;
+    color: white;
+}
+
+#wellogin{ 
+    padding: 10px;
+   width: 287px;
+   height: 50px;
+   font-size: 22px;
+  
+}
+
+#welregister{
+    padding: 10px;
+    width: 287px;
+    height: 50px;
+    font-size: 22px;
+}
+
+
+#wellogin:hover{
+    color: black;
+    transition: ease-out 0.3s;
+    box-shadow: inset 287px 0 0 0 #09464dea;
+    cursor: pointer;
+}
+
+#welregister:hover{
+    color: black;
+    transition: ease-out 0.3s;
+    box-shadow: inset 287px 0 0 0 #09464dea;
+    cursor: pointer;
+}
+
+
  
 /* login section */
 
@@ -158,9 +354,9 @@
 .covid{
     position: absolute;
     top: 0;
-    width: 100%;
-    margin-top: 600px;
-    background-color: rgb(160, 154, 154);
+    margin: 570px 600px 0px 50px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
 }
 
 #guideline{
@@ -175,29 +371,50 @@
 
 .last{
      display: flex;
-     margin-left: 5px;
-     margin-right: 5px;
-
      align-items: center;
      justify-content: center;
      padding-top: 10px;
      padding-bottom: 10px;
-     background-color: teal;
-     width: 99%;
+     background-color: white;
+     width: 100%;
+     
 }
 
 #c1{
-    margin-right: 5px;
-    padding: 90px;
+    margin-right: 25px;
+    padding: 75px;
     padding-top: 0px;
     border: 2px solid;
     width: 10%;
     height: 200px;
 }
+
+
+#c1 h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: -73px;
+    padding-right: 80px;
+}
+
+#c2 h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: -72px;
+    padding-right: 70px;
+}
+
+#c3 h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: -70px;
+    padding-right: 50px;
+}
+#c4 h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: -71px;
+}
      
 #c2{
-    margin-right: 5px;
-    padding: 90px;
+    margin-right: 25px;
+    padding: 75px;
     padding-top: 0px;
     border: 2px solid;
     width: 10%;
@@ -205,8 +422,8 @@
 }
  
 #c3{
-    margin-right: 5px;
-    padding: 90px;
+    margin-right: 25px;
+    padding: 75px;
     padding-top: 0px;
     border: 2px solid;
     width: 10%;
@@ -215,23 +432,137 @@
  
 #c4{
     
-    padding: 90px ;
+    padding: 75px ;
     padding-top: 0px;
     border: 2px solid;
     width: 10%;
     height: 200px;
 }
 
+#checkin{
+    height: 200px;
+    width: 200px;
+    margin: 0px 0px 0px -12px;
+}
+
+#baggage{
+    height: 200px;
+    width: 200px;
+    margin: 0px 0px 0px -29px;
+}
+
+#bookingingroup{
+    height: 200px;
+    width: 200px;
+    margin: 3px 0px 0px -32px;
+}
+
+#carforrent{
+    height: 258px;
+    width: 287px;
+    margin: 40px 0px 0px -67px;
+}
+
 .plan{
     display: inline-block;
-    border: 2px solid;
-    border-radius: 0px 100px 100px 0px;
-    background-color: teal;
     margin-left: 5px;
+    margin-top: 125px;
+    z-index: 4;
+    margin-left: 550px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
+/* ---------------------FOOTER--------------- */
+
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color:rgb(48, 59, 58);
+    margin-top: 30px;
+    position: absolute;
+    padding-bottom: 20px;
+}
+
+.footercontent{
+    display: flex;
+    flex-direction: row;
+    margin: 41px 0px 0px 161px;
+}
+
+#footerfirst{
+    padding-top: 10px;
+    font-size: 20px;
+    height: 200px;
+}
+#footersecond{
+    padding-top: 10px;
+    margin-left: 150px;
+    font-size: 20px;
+}
+
+.footercontent ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.footercontent ul a li{
+    list-style: none;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+    margin-top: 20px;
+}
+.footercontent ul a li:hover{
+       box-shadow: inset 90px 0 0 0 #1498a7ea;
+       padding: 5px; 
+}
+
+.paymentfooter{
+    margin: 11px 0px 0px 373px;
+    font-size: 20px;
+}
+
+#message{
+    font-size: 17px;
+    margin-top: 5px;
+}
+#paymenticons{
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 /* -----------------------------------------------------------LOG IN------------------------------------------------------- */
+
+.aviation{
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    margin: 135px 0px 0px 220px;
+}
+
+#layer2{
+    height: 450px;
+    width: 900px;
+    box-shadow: 0px 0px 5px 0px;
+}
+
+.colorlayer{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.753);
+    height: 450px;
+    width: 450px;
+    z-index: 5;
+    border-left: 0px solid rgba(0, 0, 0, 0.753);
+    margin-left: 450px;
+    border-radius: 0px 0px 0px 400px ;
+    transition: all ease 0.3s;
+}
+
 
 #login{
     display: flex;
@@ -239,67 +570,85 @@
     position: absolute;
     top:0;
     align-items: center;
-    margin-top: 200px;
-    margin-left: 31%;
-     border: 2px solid ;
-     background-color: rgba(240, 168, 34, 0.164);
+    margin-top: 45px;
+    margin-left: 61%;
+     color: #b4fba7;
      border-radius: 10px;
-     font-size: 25px;
-     box-shadow: 0px 0px 25px 0px;
+     font-size: 20px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     z-index: 5;
  }
+
+ #login input::placeholder{
+     color: rgba(255, 255, 255, 0.733);
+ }
+ 
  #username{
      margin: 15px 30px 15px 30px;
-     padding: 10px 120px 10px 5px;
-     border-radius: 15px;
-     border: 2px solid ;
-     box-shadow: 0px 0px 10px 0px;
-     font-size: 20px;
+     padding: 10px 45px 10px 5px;
+     border: none;
+     border-bottom: 2px solid white;
+     font-size: 18px;
      background: transparent;
+     outline: none;
  }
 
  #password{
     margin: 10px 30px 10px 30px;
-    padding: 10px 120px 10px 5px;
-    border-radius: 15px;
-    border: 2px solid;
-    box-shadow: 0px 0px 10px 0px;
-    font-size: 20px;
+    padding: 10px 45px 10px 5px;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 18px;
     background: transparent;
+    outline: none;
 }
 
-#btn{
+#btnlogin{
     margin: 15px 30px 15px 30px;
     padding: 10px 40px 10px 40px;
-    border-radius: 15px;
     border: 2px solid;
-    box-shadow: 0px 0px 10px 0px;
-    font-size: 20px;
+    font-size: 15px;
     background: transparent;
-    color: rgb(112, 255, 255);
+    position: relative;
+    transition: all ease 0.3s;
+    outline: none;
+    color: white;
 }
 
 #username:hover{
     box-shadow: none;
+    border-radius: 5px;
 }
 
 #password:hover{
     box-shadow: none;
+    border-radius: 5px;
 }
 
-#btn:hover{
-    box-shadow: none;
+#btnlogin:hover{
+    border-radius: 0px;
+    background-color: transparent;
+    box-shadow: inset 150px 0 0 0 #19caddea;
+    color: black;
 }
 
 #sign{
-    color:white;
+    color: white;
     font-size: 20px;
     padding-bottom: 5px;
 }
 #sign a{
     color: black;
+    color:rgb(154, 214, 44);
 }
 #sign a:hover{
      color:rgb(255, 154, 60)
+}
+
+.patch{
+     background-color: #09464dea;
+     margin: -30px 0px 0px 0px;
 }
 
 
@@ -309,38 +658,30 @@
 
 #register5{
     position: absolute;
-    border: 3px solid;
-    top: 20%;
-    left: 10%;
-    width: 80%;
+    top: 18%;
+    left: 118px;
+    width: 32%;
     height: 450px;
     z-index: 1;
-    box-shadow: 0px 0px 20px 0px;
-    background-color: rgba(0, 0, 0, 0.247);
 }
 
-.title5{
-    text-align: center;
-    color:rgb(231, 90, 34);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
 
 #reg{
    display: flex;
    flex-wrap: wrap;
-  padding-left: 110px;
-  padding-top: 20px;
-  font-size: 20px;
-  
+   padding-left: 66px;
+   padding-top: 20px;
+   font-size: 15px;
+   z-index: 21;
 }
 
 .box{
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 0px 40px 30px 40px;
     padding-top: 0px;
-    padding-bottom: 30px;
-    color: rgb(231, 90, 34);
+    padding-bottom: 20px;
+    color: #5bd8e6;
     background-color: transparent;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -348,6 +689,7 @@
 .box .details{
     text-align: left;
     padding-left: 0px;
+    
 }
 
 .container {
@@ -357,53 +699,251 @@
 
 
 .textbox{
-    border: 3px solid rgb(211, 208, 208);
-    border-radius: 10px;
-    padding: 10px 60px 10px 5px;
+    border: 1px solid rgb(211, 208, 208);   
+    padding: 8px 60px 8px 5px;
     background-color: transparent;
-    box-shadow: 0px 0px 4px 0px;
     color: white;
     outline: none;
 }
 
 .textbox:hover{
-    box-shadow: none;
-   
+   border-color: rgb(192, 117, 5);
 }
 
 
 #button{
-   border: 2px solid rgb(211, 208, 208);
-    border-radius: 10px;
-    background-color: rgb(18, 150, 18);
-    height: 30px;
-    width: 150px;
-    margin: 40px 0px 0px 317px;
-    box-shadow: 0px 0px 30px 0px;
+    border: 0px solid rgba(8, 172, 8, 0.788);
+    background-color: green;
+    height: 40px;
+    width: 349px;
+    margin: 15px 0px 0px -58px;
     padding-bottom: 3px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     outline: none;
+    color: rgba(255, 255, 255, 0.863);
+    transition: all ease 0.3s;
 }
 
 #button:hover{
-   box-shadow:  0px 0px 50px 0px;
-   background-color: white;
-}
-
-.tbox:hover{
-   background-color: rgb(18, 150, 18);
+   transition: all ease 0.3s;
+   box-shadow: inset 349px 0 0 0 rgb(192, 117, 5);
+   color: black;
 }
 
 .error{
     color: red;
-    font-size: 13px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 53px;
 }
+
+#titleg{
+    padding-top: 16px;
+    margin-top: -13px;
+    margin-left: 11px;
+}
+
+.registerpatch{
+    color: #09464dea;
+    margin: -30px 0px 0px 0px;
+}
+
+.registerlayer{
+    position: absolute;
+    top: 0;
+    margin: 100px 0px 0px 166px;
+}
+
+.registerlayer img{
+    height: 530px;
+    width: 1000px;
+}
+
+.registercolorlayer{
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 1;
+    height: 530px;
+    width: 350px;
+    position: absolute;
+}
+
 
 
 /* -----------------------------------------------------------TICKET BOOKING--------------------------------------------------------- */
 
 
+
+#form{
+    position: absolute;
+    top: 0;
+    margin: 120px 300px 0px 136px;
+}
+
+#form h1{
+    padding-top: 10px;
+    margin: -7px 8px 20px 10px;
+    text-align: center;
+    color: rgb(51, 58, 78);
+    background-color: rgb(96, 201, 228);
+    height: 50px;
+}
+
+
+#faresystem{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+}
+
+
+#faresystem p{
+   margin-top: -2px;
+   padding-right: 20px;
+   color: #ffffffb8;
+   text-decoration: none;
+}
+
+
+.first{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+}
+
+
+
+#from{
+   width: 260px;
+   padding-top: 25px;
+   margin-right: 15px;
+}
+
+#toT{
+   width: 260px;
+   padding-top: 25px;
+}
+
+#prefferedairlines{
+   width: 260px;
+   padding-top: 45px;
+   margin-right: 15px;
+   color: rgb(111 111 111);
+}
+
+#prefferedseating{
+   width: 260px;
+   padding-top: 35px;
+   color: rgb(111 111 111);
+}
+
+#deparaturedate{
+   width: 140px;
+   padding-top: 45px;
+   margin-right: 15px;
+   color: rgb(111 111 111);
+}
+
+#deparaturetime{
+   width: 140px;
+   padding-top: 45px;
+   color: rgb(111 111 111);
+}
+
+#adult{
+   width: 167px;
+   padding-top: 45px;
+   margin-right: 15px;
+}
+
+#children{
+   width: 167px;
+   padding-top: 45px;
+   margin-right: 15px;
+}
+
+#infant{
+   width: 167px;
+   padding-top: 45px;
+}
+#returndate{
+   width: 140px;
+   padding-top: 45px;
+   margin-right: 15px;
+   color: rgb(111 111 111);
+   margin-left: 28px;
+}
+
+#returntime{
+   width: 140px;
+   padding-top: 45px;
+   color: rgb(111 111 111);
+   margin-left: 27px;
+}
+
+.boxticket{
+   padding-left: 15px;
+   padding-top: 15px;
+   padding-right: 15px;
+}
+
+#btn1{
+   border: 2px solid green;
+   background-color: green;
+   height: 40px;
+   width: 250px;
+   margin: 48px 15px 20px 11px;
+   outline: none;
+}
+
+
+#btn2{
+   border: 2px solid rgb(212, 36, 36);
+   background-color: rgb(212, 36, 36);
+   height: 40px;
+   width: 250px;
+   margin: 20px 0px 20px 0px;
+   outline: none;
+}
+
+.placeholder{
+   color: rgb(111 111 111);
+   display: inline-block;
+   padding-right: 10px;
+}
+
+.ticketpatch{
+    color: #09464dea;
+    margin: -30px 0px 0px 0px;
+}
+
+.ticketimagelayer{
+    position: absolute;
+    top: 0;
+    margin: 111px 0px 30px 144px;
+    z-index: 0;
+    padding-bottom: 30px;
+}
+
+
+.ticketimagelayer img{
+    width: 1050px;
+    height: 520px;
+    border: 2px solid black;
+}
+
+.ticketoverlay{
+    background-color: rgba(0, 0, 0, 0.664);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding-bottom: 32px;
+    width: 555px;
+    height: 490px;
+}
 
 /* ----------------------------------------------------PAYMENT------------------------------------------------------------ */
 
@@ -414,12 +954,18 @@
     display: flex;
     flex-direction: column;
     top: 20%;
-    left: 34%;
+    left: 99px;
     color: white;
+    z-index: 2;
+   
 }
 
 .payment h1{
     text-align: center;
+    padding: 10px 0px 10px 0px;
+    background-color: cornflowerblue;
+    margin: -16px 0px 0px -4px;
+    width: 276px;
 }
 
 .payment h2{
@@ -427,88 +973,112 @@
 }
 
 .payment2{
-   border: 2px solid white;
    padding: 10px;
-   border-radius: 10px;
-   box-shadow: 0px 0px 20px 0px black;
 }
 
 .payment3{
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 #card{
-    border: 2px solid burlywood;
-    border-radius: 10px;
+    border: 2px solid white;
     outline: none;
     background-color: transparent;
-    padding: 10px 200px 10px 5px;
+    padding: 10px;
+    width: 224px;
 }
 #card:hover{
-   box-shadow: 0px 0px 20px 0px black;  
+   border: 2px solid rgb(255, 136, 0);
 }
 
-
 #date{
-   border: 2px solid burlywood;
-   border-radius: 10px;
+    border: 2px solid white;
    outline: none;
    background-color: transparent;
    padding: 10px 0px 10px 5px;
-   margin-right: 196px;
+   width: 110px;
 }
 #date:hover{
-   box-shadow: 0px 0px 20px 0px black;  
+    border: 2px solid rgb(255, 136, 0);
 }
 
 
 #cv{
-   border: 2px solid burlywood;
-   border-radius: 10px;
-   outline: none;
-   background-color: transparent;
-   padding: 10px 0px 10px 5px;
-   margin-left: 189px;
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    background-color: transparent;
+    width: 110px;
 }
 
-#cv:hover{
-   box-shadow: 0px 0px 20px 0px black;  
-}
-
-
-#cvcode{
-   margin-left: 189px;
-   margin-top: -69px;
-}
-
-#cvcode:hover{
-   box-shadow: 0px 0px 20px 0px black;  
+.dateleft{
+    margin-right: 10px;
 }
 
 
 #code{
-   border: 2px solid burlywood;
-   border-radius: 10px;
+    border: 2px solid white;
    outline: none;
    background-color: transparent;
-   padding: 10px 0px 10px 5px;
+   padding: 10px;
+   width: 224px;
 }
 
 #code:hover{
-   box-shadow: 0px 0px 20px 0px black;  
+   border: 2px solid rgb(255, 136, 0);
 }
 
 
 #btn{
+   border: none;
    padding: 10px;
-   border: 1px solid green;
-   border-radius: 13px;
    background-color: green;
    font-size: 20px;
    outline: none;
+   margin-left: -10px;
 }
+
+#btn:hover{
+    background-color: chocolate;
+    color:rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.paymentimagelayer{
+    position: absolute;
+    top: 0;
+    margin: 115px 0px 0px 95px;
+    z-index: 2;
+}
+
+.paymentimagelayer img{
+     height: 500px;
+     width: 850px;
+}
+
+.paymentoverlay{
+    height: 500px;
+     width: 276px;
+     background-color: rgba(0, 0, 0, 0.644);
+     position: absolute;
+
+}
+
+#additionaltext{
+    width: 270px;
+    text-align: center;
+    margin: -11px 0px 0px -12px;
+    font-weight: 100;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ 
+
+ 
+
+
 
 /* ------------------------------------------------SERVICES----------------------------------------- */
  
@@ -529,12 +1099,12 @@
     display: flex;
     margin: 30px;
     position: absolute;
-    margin-left: -527px;
+    margin: -740px 10px 10px 33px;
 }
 
 #fst{
-    border: transparent;
-    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.452);
     margin: 10px;
     height: 360px;
     width: 300px;
@@ -542,8 +1112,8 @@
 }
 
 #scnd{
-    border: transparent;
-    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    border: 2px solid rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.452);
     margin: 10px;
     height: 360px;
     width: 300px;
@@ -551,16 +1121,15 @@
 }
 
 #thrd{
-    border: transparent;
-    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    border: 2px solid rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.452);
     margin: 10px;
     height: 360px;
     width: 300px;
-    
 }
 #frth{
-    border: transparent;
-    box-shadow: 0px 0px 10px 0px rgb(109, 108, 108);
+    border: 2px solid rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.452);
     margin: 10px;
     height: 360px;
     width: 300px;
@@ -617,17 +1186,17 @@
 
 .about{
     position: absolute;
-    top: 150px;
+    top: 120px;
     color:rgb(160, 154, 154);
     display: flex;
     flex-direction: row;
-    margin-left: -5px;
+    margin-left: 85px;
 }
 
 .about h1{
     text-decoration: underline;
     text-decoration-style:dashed;
-    color:rgb(192, 135, 49);
+    color:rgb(49, 171, 192);
 }
 
 .parts{
@@ -638,19 +1207,19 @@
     display: inline-block;
     margin: 10px 10px 0px 0px;
     padding: 10px 10pxx 10px 10px;
-    height: 380px;
-    width: 600px;
-    border: 5px solid transparent;
-    box-shadow: 0px 0px 10px 0px rgba(192, 135, 49, 0.466);
+    height: 370px;
+    width: 520px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.466);
 }
 
 #element2{
     margin: 10px -70px 0px 10px;
     padding: 10px 0px 10px 20px;
-    height: 360px;
-    width: 600px;
-    border: 5px solid transparent;
-    box-shadow: 0px 0px 10px 0px rgba(192, 135, 49, 0.466);
+    height: 350px;
+    width: 500px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.466);
 }
 
 
@@ -662,12 +1231,49 @@
     position: absolute;
     top: 0;
     margin-left: 165px;
-    margin-top: 100px;
+    margin-top: 240px;
     text-align: center;
     color: white;
-    
+    font-weight: 100;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .contactus h1::first-letter{
    color: red;
+ }
+
+
+ /* ------------------------------------------------REGISTER JSP--------------------------------------------------- */
+
+ .registerjsp{
+     display: flex;
+     margin-left: 464px;
+     font-size: 30;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     border: 2px;
+     border-radius: 10px;
+     padding-top: 200px;
+ }
+ 
+ .success{
+     position: absolute;
+     top:0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 300px;
+     margin-left: 43%;
+     padding: 5px 55px 5px 55px;
+     border: 2px solid transparent;
+     border-radius: 25px;
+     background-color: white;
+     color: black;
+     font-size: 25px;
+     position: absolute;
+     outline: none;
+ }
+
+ .success:hover{
+     background-color: black;
+     color: white;
  }

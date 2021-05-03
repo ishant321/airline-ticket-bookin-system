@@ -2,7 +2,6 @@ function validation(){
     var name=document.getElementById('name').value;
     var mail=document.getElementById('mail').value;
     var mob=document.getElementById('mobnumber').value;
-    var uname=document.getElementById('uname').value;
     var pass=document.getElementById('pass').value;
     var cpass=document.getElementById('cpass').value;
 
@@ -23,12 +22,7 @@ function validation(){
         document.getElementById('nameerror').innerHTML="**numbers are not allowed";
         return false;
     }
-    if((name!==" ")&&((name.length<=4)||(name.length>30))&&(isNaN(name)))
-    {
-        document.getElementById('nameerror').innerHTML="";
-        return false;
-        
-    }
+    
 
     // ----------EMAIL----------
     if(mail == "")
@@ -44,20 +38,26 @@ function validation(){
         document.getElementById('mailerror').innerHTML="**invalid . position";
         return false;
     }
-    
 
      // ----------MOBILE NUMBER----------
      if (mob == "") {
         document.getElementById('moberror').innerHTML="**Mobile number can not be blank";
         return false;
      }
-    
 
-    //  ----------USERNAME----------
-     if (uname == "") {
-        document.getElementById('usernameerror').innerHTML="**Username can not be blank";
+     if(isNaN(mob))
+     {
+        document.getElementById('moberror').innerHTML="**It should be your mobile number";
         return false;
      }
+
+     if(mob.length!=4)
+     {
+        document.getElementById('moberror').innerHTML="**Enter a valid mobile number";
+        return false;
+     }
+    
+
 
     //  ----------PASSWORD----------
 
@@ -66,6 +66,13 @@ function validation(){
         return false;
      }
 
+     if((pass.length>6)&&(pass.length<15))
+    {
+        document.getElementById('passworderror').innerHTML="**Password must between 5 and 15";
+        return false;
+    }
+
+
 
     //  -----------CONFIRM PASSWORD----------
 
@@ -73,4 +80,10 @@ function validation(){
         document.getElementById('conpassworderror').innerHTML="**Confirm password can not be blank";
         return false;
      }
+
+     if (pass!=cpass) {
+        document.getElementById('conpassworderror').innerHTML="**Password didn't match";
+        return false;
     }
+    
+}
