@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>first page</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/index.js"></script>
 </head>
 <body >
     <div id="parent">
@@ -13,9 +14,15 @@
     <div class="overlay"></div>
     </div>
     <nav id="navbar">
-        <div id="searchbar">
-            <input type="text" placeholder="SEARCH YOUR FLIGHT">
-        </div>
+    
+           
+                <select id="searchbar" name="search your flight">
+                <option  selected disabled hidden>Search Your Flight</option>
+                <option value="Indigo">Indigo</option>
+                <option value="JetAirways">JetAirways</option>
+                <option value="Vistara">Vistara</option>
+                <option value="AirIndia">AirIndia</option>
+                </select>
 
         <ul>
             <li class="item"><a href="index.html">HOME</a></li>
@@ -47,19 +54,86 @@
                <input type="radio"  name="status"><p>Round trip</p>
            </div>
 
-
+<form action="login.html" onsubmit="return verify()" method="post">
            <div class="box20">
-               <input type="text" class="first20"  placeholder="From">
-               <input type="text" class="first20"  placeholder="To">
+                 <select type="text" class="first20" id="indexfrom">
+                <option  selected disabled hidden>From</option>
+                <option value="Agartala">Agartala</option>
+                <option value="Bhubaneswar">Bhubaneswar</option>
+                <option value="coimbatore">Coimbatore</option>
+                <option value="Dispur">Dispur</option>
+                <option value="Gaya">Gaya</option>
+                <option value="Goa">Goa</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Imphal">Imphal</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Mumbi">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Patna">Patna</option>
+                <option value="Pune">Pune</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Shilong">Shilong</option>
+                <option value="Srinagar">Srinagar</option>
+                <option value="Surat">Surat</option>
+                <option value="Thiurvananthapuram">Thiurvananthapuram</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Tirupati">Tirupati</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Varanasi">Varanasi</option>
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Visakhpatnam">Visakhpatnam</option>  
+                 </select>
+                 <span id="indexfromerror"></span>
+
+
+                 <select type="text" class="first20" id="indexto">
+                <option  selected disabled hidden>To</option>
+                <option value="Agartala">Agartala</option>
+                <option value="Bhubaneswar">Bhubaneswar</option>
+                <option value="coimbatore">Coimbatore</option>
+                <option value="Dispur">Dispur</option>
+                <option value="Gaya">Gaya</option>
+                <option value="Goa">Goa</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Imphal">Imphal</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Lucknow">Lacknow</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Mumbi">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Patna">Patna</option>
+                <option value="Pune">Pune</option>
+                <option value="Ranchi">Ranchi</option>
+                <option value="Shilong">Shilong</option>
+                <option value="Srinagar">Srinagar</option>
+                <option value="Surat">Surat</option>
+                <option value="Thiurvananthapuram">Thiurvananthapuram</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Tirupati">Tirupati</option>
+                <option value="Udaipur">Udaipur</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Varanasi">Varanasi</option>
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Visakhpatnam">Visakhpatnam</option>   
+                 </select>
+                 <span id="indextoerror"></span>
+                 <span id="indexfromtoerror"></span>
            </div>
 
 
-       <div class="box30">
-           <div class="button">
-           <a href="payment.html"><input type="button" id="btn12" value="Book a ticket" placeholder="Full name"></a></div>
-       </div>
+           <div class="box30">
+                <div class="button">
+                      <input type="submit"  id="btn12" value="Book a ticket" placeholder="Full name">
+                </div>
+            </div>
+</form>
 
-       </div>
+    </div>
 
 
 
@@ -143,7 +217,7 @@
             </div>
 
             <div id="paymenticons">
-                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/gpay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/credit.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/paytm.png" alt="image not available">
+                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/gpay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/credit.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
             </div>
     </div>
 </div>
@@ -151,3 +225,12 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+

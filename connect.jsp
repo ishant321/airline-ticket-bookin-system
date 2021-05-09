@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/style.css"></head>
-<body>
+<body style="background-color:black; color:red; font-size:55px; flex-direction:column; margin-top: 60px; margin-left: 100px;" z>
 
 
 <div class="registerjsp">
@@ -27,6 +27,19 @@
      ps.setString(5,confirmpassword);
      ps.setString(6,gender);
 
+     Statement st=conn.createStatement();
+     ResultSet rs2=st.executeQuery("select mail from passenger where mail='"+mail+"'");
+     int c=0;
+     while(rs2.next())
+     {
+         c++;
+     }
+     if(c>0)
+     {
+         out.println("email already exist");
+     }
+
+else{
      int x=ps.executeUpdate();
 
      if(x>0)
@@ -37,29 +50,17 @@
      else{
          out.println("Registration failed.....");
      }
-
+}
 
    }catch(Exception e){
        out.println(e);
    }
-
+   
 %>
 </div>
 
-<div id="parent">
-        <section class="body"></section>
-        <div class="overlay"></div>
-    </div>
-    <nav id="navbar">
 
-        <ul>
-            <li class="item"><a href="welcome.html">Home</a></li>
-            <li class="item"><a href="service.html">Services</a></li>
-            <li class="item"><a href="about.html">About&nbspus</a></li>
-            <li class="item"><a href="contact.html">Contact&nbspus</a></li>
-        </ul>
-    </nav>
-    </div>
-<a href="login.html"><input type="submit" class="success" value="LogIn"><a>
+<a href="login.html"><input style="height: 50px; width: 100px;border: 2px solid black; background-color: orange; border-radius: 10px; font-size: 19px; margin-left: 480px" type="submit" value="LogIn"><a>
+<a href="Register.html"><input style="height: 50px; width: 100px;border: 2px solid black; background-color: green; font-size: 19px; border-radius: 10px;" type="submit" value="Register"><a>
 </body>
 </html>

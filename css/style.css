@@ -92,9 +92,16 @@
  #searchbar {
      position: absolute;
      margin-left: 30px;
-     border: none;
      left: 0;
-     margin-left: 30px;
+     outline: none;
+     border:none;
+     border-bottom: 1px solid white;
+     background: none;
+     color: rgba(255, 255, 255, 0.616);
+     width: 200px
+ }
+ #searchbar option{
+     color: black;
  }
  #searchbar input{
     outline: none;
@@ -200,24 +207,25 @@
     border: none;
     border-bottom: 2px solid black;
     background-color: transparent;
-    color: white;
+    color: black;
     outline: none;
     margin: 10px;
     margin-right: 0px;
     width:  297px;
+    font-size: 17px;
 }
 
-.first20::placeholder{
-    color: black;
-    font-size: 15px;
+.first20 option{
+    background-color: rgba(50, 102, 97, 0.555);
 }
+
 
 .box20{
     margin: 36px 0px 0px -9px;   
 }
 
 .box30{
-    margin: 39px 0px 0px 0px;
+    margin: 33px 0px 0px 0px;
     height: 40px;
     border: 2px solid black;
     position: relative;
@@ -472,6 +480,27 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+#indexfromerror{
+    color: rgb(146, 13, 13);
+    position: absolute;
+    margin: 35px 0px 0px -300px;
+    font-weight: 700;
+}
+
+#indextoerror{
+    color: rgb(146, 13, 13);
+    position: absolute;
+    margin: 35px 0px 0px -297px;
+    font-weight: 700;
+}
+
+#indexfromtoerror{
+    color: rgb(146, 13, 13);
+    position: absolute;
+    margin: 47px 0px 0px -443px;
+    font-weight: 700;
+}
+
 
 /* ---------------------FOOTER--------------- */
 
@@ -534,6 +563,13 @@
     flex-direction: row;
 }
 
+.paytmspecial{
+    background-color: whitesmoke;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 40px;
+}
+
 
 
 /* -----------------------------------------------------------LOG IN------------------------------------------------------- */
@@ -584,7 +620,7 @@
      color: rgba(255, 255, 255, 0.733);
  }
  
- #username{
+ #emailll{
      margin: 15px 30px 15px 30px;
      padding: 10px 45px 10px 5px;
      border: none;
@@ -592,6 +628,7 @@
      font-size: 18px;
      background: transparent;
      outline: none;
+     color: white;
  }
 
  #password{
@@ -602,6 +639,7 @@
     font-size: 18px;
     background: transparent;
     outline: none;
+    color: white;
 }
 
 #btnlogin{
@@ -616,7 +654,7 @@
     color: white;
 }
 
-#username:hover{
+#emailll:hover{
     box-shadow: none;
     border-radius: 5px;
 }
@@ -649,6 +687,21 @@
 .patch{
      background-color: #09464dea;
      margin: -30px 0px 0px 0px;
+}
+
+/* ---------JAVA SCRIPT------------- */
+
+.loginerrorpage{
+    color: red;
+    font-size: 15px;
+    position: absolute;
+    text-align: left;
+}
+#emailerror{
+    margin: 95px 0px 0px 0px;
+}
+#passworderrorlogin{
+    margin: 161px 0px 0px 0px;
 }
 
 
@@ -782,7 +835,7 @@
 
 #form h1{
     padding-top: 10px;
-    margin: -7px 8px 20px 10px;
+    margin: -7px 15px 20px 10px;
     text-align: center;
     color: rgb(51, 58, 78);
     background-color: rgb(96, 201, 228);

@@ -22,6 +22,9 @@ function validation(){
         document.getElementById('nameerror').innerHTML="**numbers are not allowed";
         return false;
     }
+    else{
+        document.getElementById('nameerror').innerHTML="";
+    }
     
 
     // ----------EMAIL----------
@@ -38,6 +41,10 @@ function validation(){
         document.getElementById('mailerror').innerHTML="**invalid . position";
         return false;
     }
+    else{
+        document.getElementById('mailerror').innerHTML="";
+    }
+
 
      // ----------MOBILE NUMBER----------
      if (mob == "") {
@@ -56,7 +63,9 @@ function validation(){
         document.getElementById('moberror').innerHTML="**Enter a valid mobile number";
         return false;
      }
-    
+     else{
+        document.getElementById('moberror').innerHTML="";
+    }
 
 
     //  ----------PASSWORD----------
@@ -71,7 +80,9 @@ function validation(){
         document.getElementById('passworderror').innerHTML="**Password must between 5 and 15";
         return false;
     }
-
+    else{
+        document.getElementById('passworderror').innerHTML="";
+    }
 
 
     //  -----------CONFIRM PASSWORD----------
@@ -84,6 +95,9 @@ function validation(){
      if (pass!=cpass) {
         document.getElementById('conpassworderror').innerHTML="**Password didn't match";
         return false;
+    }
+    else{
+        document.getElementById('conpassworderror').innerHTML="";
     }
     
 }
