@@ -7,29 +7,22 @@
     <title>first page</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="javascript/index.js"></script>
+
 </head>
 <body >
-    <div id="parent">
    <section class="body"></section>
-    <div class="overlay"></div>
-    </div>
-    <nav id="navbar">
+    <nav class="navbar" id="navbar">
     
-           
-                <select id="searchbar" name="search your flight">
-                <option  selected disabled hidden>Search Your Flight</option>
-                <option value="Indigo">Indigo</option>
-                <option value="JetAirways">JetAirways</option>
-                <option value="Vistara">Vistara</option>
-                <option value="AirIndia">AirIndia</option>
-                </select>
+                <div id="searchbar">
+                     <img src="image/flag.png" alt="">
+                </div>
 
-        <ul>
-            <li class="item"><a href="index.html">HOME</a></li>
-            <li class="item"><a href="service.html">SERVICES</a></li>
-            <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
-            <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
-        </ul> 
+                <ul class="nav navbar-nav navbar-right">
+                     <li class="item"><a href="index.html">HOME</a></li>
+                     <li class="item"><a href="service.html">SERVICES</a></li>
+                     <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
+                     <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
+                </ul> 
     </nav>
 
 
@@ -39,25 +32,16 @@
         <div id="to50">TO</div>
         <div id="indian">INDIAN</div>
         <div id="airlines">AIRLINES</div>
-</div>
-<!-- ----------------------------BOOK YOUR TICKET-------------------------- -->
+    </div>
 
         
     
    <div class="welcomeboxticket">
-       
 
-           <div id="faresystem2">
-               <p>Select your fare:&nbsp&nbsp&nbsp&nbsp</p>
-
-               <input type="radio"  name="status"><p>One way</p>
-               <input type="radio"  name="status"><p>Round trip</p>
-           </div>
-
-<form action="login.html" onsubmit="return verify()" method="post">
+        <form action="login.html" onsubmit="return verify()" method="post">
            <div class="box20">
                  <select type="text" class="first20" id="indexfrom">
-                <option  selected disabled hidden>From</option>
+                <option  selected disabled hidden>Departure_City</option>
                 <option value="Agartala">Agartala</option>
                 <option value="Bhubaneswar">Bhubaneswar</option>
                 <option value="coimbatore">Coimbatore</option>
@@ -91,7 +75,7 @@
 
 
                  <select type="text" class="first20" id="indexto">
-                <option  selected disabled hidden>To</option>
+                <option  selected disabled hidden>Arrival_City</option>
                 <option value="Agartala">Agartala</option>
                 <option value="Bhubaneswar">Bhubaneswar</option>
                 <option value="coimbatore">Coimbatore</option>
@@ -124,37 +108,19 @@
                  <span id="indextoerror"></span>
                  <span id="indexfromtoerror"></span>
            </div>
-
-
-           <div class="box30">
-                <div class="button">
-                      <input type="submit"  id="btn12" value="Book a ticket" placeholder="Full name">
-                </div>
+          
+            <div class="box30">
+                
+                 <input type="submit"  id="btn12" value="Search your flight" placeholder="Full Name">
+                
             </div>
-</form>
-
+        </form>
     </div>
 
-
-
-
-
-    
     <div class="welcometicket">
-        <a href="login.html"><h2><input type="button" class="part" id="wellogin" value="Log In"></h2></a>
-       <a href="register.html"><h2><input type="button" class="part" id="welregister" value="Register"></h2></a>
+        <a href="login.html"><h2><input type="button" class="part" value="Log In"></h2></a>
+       <a href="register.html"><h2><input type="button" class="part" value="Register"></h2></a>
     </div>
-    
-
-     <!-- <div id="logo">
-          <img src="image/flag.png" alt="not loaded">
-     </div>   -->
-    
-   <!-- login -->
-<!-- <div id="ln">
-    <a href="login.html"><button id="loginfirst">Log in</button></a>
-    <a href="register.html"><button id="registerfirst">Register</button></a>
-</div> -->
 
 <!-- covid instructions -->
 <div class="covid">

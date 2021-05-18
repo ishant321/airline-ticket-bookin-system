@@ -8,120 +8,59 @@
 
 /* navigation bar */
 .body{
-    background: url('/image/aeroplane.jpg');
-    background-repeat: no-repeat;
+    background: #09393d url('/image/aeroplane.jpg');
     background-size: cover;
-    width: 100%;
-    height: 657px;
-  
+    background-blend-mode: multiply;
+    height: 657px; 
 }
-
-
-.overlay{
-    background: #09464dea; 
-    width: 100%;
-    height: 657px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-  
 
 #navbar{
-    
-    display: flex; 
     position: absolute;
     top: 0;
-    width:98%;
-    margin: 10px 10px 0px 10px;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
+    width: 98%;
+    margin: 10px;
+    height: 60px;
     background-color: rgba(0, 0, 0, 0.514);
     border: 2px solid black
-}
+} 
 
 #navbar ul{
     display: flex;
-    height: 45px;
-    padding: 10px 15px 5px 15px;
-    margin: 0px 0px 0px 700px;
-   
+    margin-left: 790px;
 }
 
 #navbar ul li{
    color: black;
    list-style-type: none;
    font-size: 1.1rem;
-   padding: 10px 20px 10px 20px;
-   align-items: center;
+   padding: 20px;
 }
 
 #navbar ul li a{             
    color: rgb(255, 255, 255); 
-   display:inline;
    text-decoration: none;
    font-size: 13px;
-   border: 1px solid transparent;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    padding: 5px;
    position: relative;
  }
 
- #navbar ul li a:before{
-    transition: 0.5s all ease-out;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    background-color: #09464dea;
+ #navbar ul li a:hover{
+     font-size: 15px;
+     transition: 0.2s linear;
  }
 
- #navbar ul li a:hover:before{
-    transition: 0.5s all ease;;
-    top:0;
-    opacity: 1;
-    z-index: -1;
-  
- }
 
  #searchbar {
      position: absolute;
      margin-left: 30px;
      left: 0;
-     outline: none;
-     border:none;
-     border-bottom: 1px solid white;
-     background: none;
-     color: rgba(255, 255, 255, 0.616);
-     width: 200px
+     width: 200px;
  }
- #searchbar option{
-     color: black;
+ #searchbar img{
+     height: 50px;
+     width: 100px;
  }
- #searchbar input{
-    outline: none;
-    border: none;
-    border-bottom: 1px solid white;
-    background-color: transparent;
-    size: 50px;
-    width: 300px;
-    color: white;
- }
-
- #searchbar input::placeholder{
-    color: rgba(255, 255, 255, 0.452);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
-
- #searchbar input:hover{
-    border-bottom: 1px solid #09464dea;
- }
-
  
  /* home section */
 
@@ -171,37 +110,23 @@
     font-size: 90px;
 }
 
+.rightside{
+    display: flex;
+    flex-direction: column;
+}
+
 .welcomeboxticket{
-    z-index: 3;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0;
     margin-top: 170px;
     margin-left: 675px;
     border: 2px solid black;
     padding: 10px;
-    height: 200px;
-    width: 610px;
-    background-color: rgba(255, 255, 255, 0.11);
+    width: 46%;
+    background-color: rgb(253 253 253 / 11%);
 }
-
-
-#faresystem2{
-    display: flex;
-    flex-direction: row;
-    margin: 21px 0px 20px 122px;
-    font-size: 20px;
-}
-
-#faresystem2 input{
-   margin-top: 5px;
-}
-
-#faresystem2 p{
-    margin-right: 10px;
-}
-
-
-
 
 .first20{
     border: none;
@@ -228,58 +153,38 @@
     margin: 33px 0px 0px 0px;
     height: 40px;
     border: 2px solid black;
-    position: relative;
 }
-
-.box30:before{
-    transition: 0.3s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    background-color: #09464dea;
-}
-
-.box30:hover:before{
-    transition: 0.3s all ease;;
-    left:0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
-}
-
 
 #btn12{
     background-color: transparent;
     border: none;
-    margin: 4px 0px 0px 228px;
-    font-size: 27px
+    margin: 4px 0px 0px 192px;
+    font-size: 177%;
+    position: relative;
 }
 
 
 .welcometicket{
     display: flex;
     flex-direction: row;
-    z-index: 1;
     position: absolute;
-    margin: -264px 0px 0px 646px;
-  
-    
+    top: 0;
+    margin: 400px 833px;
 }
 
 .part{
-    padding: 10px;
-    height: 65px;
-    margin: 30px;
+    height: 45px;
+    width: 170px;
     background-color: rgba(0, 0, 0, 0.514);
-    border: 2px solid black;
+    border: 2px solid rgba(255, 255, 255, 0.658);
+    border-radius: 10px;
     color: white;
+    font-size: 22px;
 }
 
-#wellogin{ 
+
+
+/* #wellogin{ 
     padding: 10px;
    width: 287px;
    height: 50px;
@@ -292,24 +197,7 @@
     width: 287px;
     height: 50px;
     font-size: 22px;
-}
-
-
-#wellogin:hover{
-    color: black;
-    transition: ease-out 0.3s;
-    box-shadow: inset 287px 0 0 0 #09464dea;
-    cursor: pointer;
-}
-
-#welregister:hover{
-    color: black;
-    transition: ease-out 0.3s;
-    box-shadow: inset 287px 0 0 0 #09464dea;
-    cursor: pointer;
-}
-
-
+} */
  
 /* login section */
 
@@ -1330,3 +1218,10 @@
      background-color: black;
      color: white;
  }
+
+
+
+
+
+ /* --------------------------------RESPONSIVE------------------------------------- */
+

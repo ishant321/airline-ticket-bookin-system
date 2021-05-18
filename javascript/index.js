@@ -2,22 +2,22 @@ function verify(){
   var from=document.getElementById('indexfrom').value;
   var to=document.getElementById('indexto').value;
 
-  if(from=="From")
+  if(from=="Departure_City")
   {
     document.getElementById('indexfromerror').innerHTML="**from can not be blank";
        return false;
   }
-  if(from!=="From"){
+  if(from!=="Departure_City"){
     document.getElementById('indexfromerror').innerHTML=" ";
   }
 
-  if(to=="To")
+  if(to=="Arrival_City")
   {
     document.getElementById('indextoerror').innerHTML="**to can not be blank";
        return false;
   }
 
-  if(to!=="To"){
+  if(to!=="Arrival_City"){
     document.getElementById('indextoerror').innerHTML=" ";
   }
 
