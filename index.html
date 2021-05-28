@@ -6,41 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>first page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=KoHo:wght@200&display=swap" rel="stylesheet">
     <script src="javascript/index.js"></script>
 
 </head>
 <body >
-   <section class="body"></section>
-    <nav class="navbar" id="navbar">
+   <section class="body">
+    <nav class="navbar h-nav">
     
                 <div id="searchbar">
                      <img src="image/flag.png" alt="">
                 </div>
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav v-class">
                      <li class="item"><a href="index.html">HOME</a></li>
                      <li class="item"><a href="service.html">SERVICES</a></li>
                      <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
                      <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
                 </ul> 
+
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
     </nav>
 
-
-   
-    <div id="home"></div>
-        <div id="welcome">WELCOME</div>
-        <div id="to50">TO</div>
-        <div id="indian">INDIAN</div>
-        <div id="airlines">AIRLINES</div>
-    </div>
-
         
-    
-   <div class="welcomeboxticket">
+  <div class="home">  
 
+    <div class="homeup">
+        <span class="home-error" id="indexfromerror"></span>
+        <span class="home-error" id="indextoerror"></span>
+        
         <form action="login.html" onsubmit="return verify()" method="post">
            <div class="box20">
-                 <select type="text" class="first20" id="indexfrom">
+                 <select  type="text" class="first20" id="indexfrom">
                 <option  selected disabled hidden>Departure_City</option>
                 <option value="Agartala">Agartala</option>
                 <option value="Bhubaneswar">Bhubaneswar</option>
@@ -71,7 +75,7 @@
                 <option value="Vijayawada">Vijayawada</option>
                 <option value="Visakhpatnam">Visakhpatnam</option>  
                  </select>
-                 <span id="indexfromerror"></span>
+                 
 
 
                  <select type="text" class="first20" id="indexto">
@@ -105,68 +109,79 @@
                 <option value="Vijayawada">Vijayawada</option>
                 <option value="Visakhpatnam">Visakhpatnam</option>   
                  </select>
-                 <span id="indextoerror"></span>
-                 <span id="indexfromtoerror"></span>
-           </div>
-          
-            <div class="box30">
-                
-                 <input type="submit"  id="btn12" value="Search your flight" placeholder="Full Name">
-                
-            </div>
+                 
+                 
+           </div> 
+                 <input type="submit" class="box30" value="Search your flight" placeholder="Full Name">
+            
         </form>
     </div>
 
-    <div class="welcometicket">
-        <a href="login.html"><h2><input type="button" class="part" value="Log In"></h2></a>
-       <a href="register.html"><h2><input type="button" class="part" value="Register"></h2></a>
-    </div>
-
-<!-- covid instructions -->
-<div class="covid">
-    <h1>COVID GUIDELINES</h1> 
-        
-   <marquee behavior="" direction="">
-            <p id="guideline">
-        As per mandate by Government of India all passengers arriving into India
-         by international flights need to register on newdelhiairport.in at least 72<br>
-          hours prior to departure.
-   International passengers arriving at the airports have to follow certain
- guidelines before taking a domestic flight. The guidelines<br>
-  include downloading Aarogya Setu app, complying with thermal screening, 
-  filling a self-declaration form and more. Hence, it is advisable to be aware of these <br>
-  guidelines before entering the state.
-            </marquee>
-    </p>
-</div>
-
-<!-- end elements of the page -->
-<div class="plan"><h1>-Plan your travel-</h1>
-    </div>
-<div class="last">
+      <div class="homedown">
+          <h1>Fly With Us</h1>
+          <h2>Indian-Airlines</h2>
+        <p> We are promising to make your journey comfortable and safe with indian airlines. With indian airlines, you can easily book any ticket you need to travel safely, thanks to out detailed system of searching and booking airline tickets</p>
+      </div>
+  
    
-<div id="c1"><a><h2>Mandatory check-ins</h2></a><img id="checkin" src="image/checkin.png" alt="not found"></div>
-<div id="c2"><a><h2>Baggage tag</h2></a><img id="baggage" src="image/baggage.png" alt="not found"></div>
-<div id="c3"><a><h2>Group booking</h2></a><img id="bookingingroup"src="image/bookingroup.png" alt="not found"></div>
-<div id="c4"><a><h2>Rent a car</h2></a><img id="carforrent" src="image/car.png" alt="not found"></div>
-</div>
+    <div class="login-register">
+        <a href="login.html"><h2><input type="button" class="indexlogin" value="Log In"></h2></a>
+       <a href="register.html"><h2><input type="button" class="indexregister" value="Register"></h2></a>
+    </div>
+
+  </div></section>
+
+    
+
+<!-- image slider-->
+<div class="company">
+    <div class="partition">
+        <div><img src="image/indigo.jpg" alt="not found"> 
+         <p>Indigo</p></div>
+        <div> <img src="image/spicejet.jpg" alt="not found">  
+         <p>Spice-Jet</p></div>
+         <div><img src="image/vistara.jpg" alt="not found">
+         <p>Vistara</p></div>
+    </div> 
+    <div class="partition">
+         <div><img src="image/airasia.jpg" alt="not found">  
+         <p>Air-asia</p></div>
+         <div><img src="image/airindia.jpg" alt="not found">  
+         <p>Air-India</p></div>
+     </div>
 </div>
 
+<!-- end elements of the page --> 
+<div class="plan"><h1>-Plan your travel-</h1>
+   <div class="plan-content"> 
+
+         <div class="plan-content-elements">
+
+              <div><a><h2>Mandatory check-ins</h2></a><img id="checkin" src="image/checkin.png" alt="not found"></div>
+              <div><a><h2>Baggage tag</h2></a><img id="baggage" src="image/baggage.png" alt="not found"></div>
+         </div>
+
+         <div class="plan-content-elements">
+              <div><a><h2>Group booking</h2></a><img id="bookingingroup"src="image/bookingroup.png" alt="not found"></div>
+              <div><a><h2>Rent a car</h2></a><img id="carforrent" src="image/car.png" alt="not found"></div>
+         </div>
+   </div>
+</div>
+
+
+<!-- -----------------footer-------------- -->
 
 <div class="footer">
 
-    <div class="footercontent">
-
-        <div id="footerfirst">
+            <div class="footer-content">
             <h2>Get Help</h2>
                 <ul>
                 <a href="service.html"><li>Services</li></a>
                 <a href="about.html"><li>About Us</li></a>
                 <a href="contact.html"><li>Contact Us</li></a>
                 </ul>
-        </div>
-
-        <div id="footersecond">
+            </div>
+            <div class="footer-content">
             <h2>Social Media</h2>
                <ul>
                <a href="contact.html"><li>Instagram</li></a>
@@ -174,21 +189,27 @@
                <a href="contact.html"><li>YouTube</li></a>
                <a href="contact.html"><li>Twitter</li></a>
                </ul>
-    </div> 
+             </div>  
+     
 
-    <div class="paymentfooter">
+           <div class="footer-content">
         <h2>Payment Methods</h2>
-            <div id="message">
+            <p>
                  Your data security and privacy is our responsibility
-            </div>
+            </p>
 
             <div id="paymenticons">
-                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/gpay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/credit.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
+                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">
+                   <img id="paymenttypes" src="image/gpay.png" alt="image not available">
+                   <img id="paymenttypes" src="image/credit.png" alt="image not available">
+                   <img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
             </div>
     </div>
-</div>
+
 </div>
 
+
+<script src="javascript/indexresponsive.js"></script>
 </body>
 </html>
 

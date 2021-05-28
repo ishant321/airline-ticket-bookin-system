@@ -4,7 +4,7 @@ function verify(){
 
   if(from=="Departure_City")
   {
-    document.getElementById('indexfromerror').innerHTML="**from can not be blank";
+    document.getElementById('indexfromerror').innerHTML="Please select your departuere city";
        return false;
   }
   if(from!=="Departure_City"){
@@ -13,7 +13,7 @@ function verify(){
 
   if(to=="Arrival_City")
   {
-    document.getElementById('indextoerror').innerHTML="**to can not be blank";
+    document.getElementById('indextoerror').innerHTML="please select your arrival city";
        return false;
   }
 
@@ -23,7 +23,9 @@ function verify(){
 
    if(from == to)
    {
-       document.getElementById('indexfromtoerror').innerHTML="**source and destination can not be same";
+       document.getElementById('indexfromtoerror').innerHTML="Departure city and arrival city can not be same";
        return false;
    }
 }
+
+

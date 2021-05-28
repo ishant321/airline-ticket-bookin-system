@@ -7,91 +7,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <script src="javascript/login.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=KoHo:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 
 <body>
-    <div id="parent">
-        <section class="body"></section>
-         <div class="overlay"></div>
-         </div>
-         <nav id="navbar">
-            <div id="searchbar" name="search your flight">
-                <img src="image/flag.png" alt="">
+    <section class="body">
+        <nav class="navbar h-nav">
+        
+                    <div id="searchbar">
+                         <img src="image/flag.png" alt="">
                     </div>
-     
-             <ul>
-                 <li class="item"><a href="index.html">HOME</a></li>
-                 <li class="item"><a href="service.html">SERVICES</a></li>
-                 <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
-                 <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
-             </ul> 
-         </nav>
-    </div>  
-
-    <div class="aviation">
-        <div class="colorlayer"></div>
-        <img id="layer2" src="image/aviation.jpg" alt="image not available">
+    
+                    <ul class="nav v-class">
+                         <li class="item"><a href="index.html">HOME</a></li>
+                         <li class="item"><a href="service.html">SERVICES</a></li>
+                         <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
+                         <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
+                    </ul> 
+    
+                    <div class="burger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+        </nav>
+<div class="login-page">
    
     <form action="login.jsp" onsubmit="return login()" method="post">
 
 
-    <div id="login">
-        <h2><u>Log In</u></h2>
-
-       
-        <input type="text" placeholder="enter your Email" autocomplete="none" id="emailll" name="loginmail">
+    <div>
+        <h2>Log In</h2>
+        <div>
+        <i class="far fa-envelope icons"></i>
+        <input type="text" placeholder="Enter your Email" autocomplete="none" class="boxes" id="emailll" name="loginmail">
         <span class="loginerrorpage" id="emailerror"></span>
+        </div>
 
-        <input type="password" placeholder="enter password" id="password" name="loginpass">
+        <div>
+            <i class="fas fa-lock icons"></i>
+         <input type="password" placeholder="Enter your password" class="boxes" id="password" name="loginpass">
         <span class="loginerrorpage" id="passworderrorlogin"></span>
-
+        </div>
         <a href="ticket.html"><input type="submit" value="LogIn" id="btnlogin"></a>
         <P id="sign">New user? <a href="register.html">signup</a></P>
-
+        
+    </div>
     </form>
     </div>
 
+    </section>
+<!-- ----------------------------OUR CITIES---------------------- -->
+<p class="city-title">EXPLORE THE WONDERS OF INDIA</p>
+<div class="cities">
+    <div class="sections">
+       <div class="city-name">
+        <div class="city-image">
+            <img src="image/mumbai.jpg" alt="">
+         </div>
+                   <div class="city-abouts">
+                        <h2>Mumbai</h2> 
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique itaque vitae distinctio temporibus cumque! Similique adipisci error aliquid nam praesentium eius saepe sint, magnam commodi debitis suscipit aperiam ipsa consequatur.</p>
+                  </div>
+       
+       </div>
+       <div class="city-name">
+        <div class="city-image">
+               <img src="image/shimla.jpg" alt="">
+            </div>
+                   <div class="city-abouts">
+                       <h2>Shimla</h2>
+                       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates libero quasi dolor, ex quo vel delectus atque quae, at ipsam labore velit non consequatur minus quia eligendi voluptas? Praesentium.</p>
+                  </div>
+        
+       </div>
+    </div>
+    <div class="sections">
+       <div class="city-name">
+        <div class="city-image">
+               <img src="image/gangtok.jpg" alt="">
+            </div>
+                    <div class="city-abouts">
+                        <h2>Gangtok</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, beatae tenetur quia nulla deserunt recusandae at eius eum ipsam perferendis rem quas dolores suscipit quos provident minus consequatur. Voluptate, quaerat!</p>
+                    </div>
+        
+       </div>
+       <div class="city-name">
+        <div class="city-image">
+             <img src="image/hyderabad.jpg" alt="">
+            </div>
+                   <div class="city-abouts">
+                        <h2>Hyderabad</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam quisquam ipsa nam veniam unde quaerat. Ut, assumenda temporibus, doloremque aperiam quia atque laborum nulla, excepturi molestiae harum blanditiis recusandae.</p>
+                   </div>
+        
+       </div>
+    </div>
 </div>
-    <div class="patch"></div>
 
 <!-- -----------------------------------FOOTER------------------------------------ -->
 
 <div class="footer">
 
-    <div class="footercontent">
-
-        <div id="footerfirst">
-            <h2>Get Help</h2>
-                <ul>
-                <a href="service.html"><li>Services</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
-                </ul>
-        </div>
-
-        <div id="footersecond">
-            <h2>Social Media</h2>
-               <ul>
-               <a href="contact.html"><li>Instagram</li></a>
-               <a href="contact.html"><li>Facebook</li></a>
-               <a href="contact.html"><li>YouTube</li></a>
-               <a href="contact.html"><li>Twitter</li></a>
-               </ul>
-    </div> 
-
-
-    <div class="paymentfooter">
-        <h2>Payment Methods</h2>
-            <div id="message">
-                 Your data security and privacy is our responsibility
-            </div>
-
-            <div id="paymenticons">
-                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/gpay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/credit.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
-            </div>
+    <div class="footer-content">
+    <h2>Get Help</h2>
+        <ul>
+        <a href="service.html"><li>Services</li></a>
+        <a href="about.html"><li>About Us</li></a>
+        <a href="contact.html"><li>Contact Us</li></a>
+        </ul>
     </div>
+    <div class="footer-content">
+    <h2>Social Media</h2>
+       <ul>
+       <a href="contact.html"><li>Instagram</li></a>
+       <a href="contact.html"><li>Facebook</li></a>
+       <a href="contact.html"><li>YouTube</li></a>
+       <a href="contact.html"><li>Twitter</li></a>
+       </ul>
+     </div>  
 
+
+   <div class="footer-content">
+<h2>Payment Methods</h2>
+    <p>
+         Your data security and privacy is our responsibility
+    </p>
+
+    <div id="paymenticons">
+           <img id="paymenttypes" src="image/phonepay.png" alt="image not available">
+           <img id="paymenttypes" src="image/gpay.png" alt="image not available">
+           <img id="paymenttypes" src="image/credit.png" alt="image not available">
+           <img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
+    </div>
+</div>
+
+</div>
+    
+<script src="javascript/indexresponsive.js"></script>
 </body>
 
 </html>

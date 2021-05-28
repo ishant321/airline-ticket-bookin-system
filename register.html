@@ -6,126 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=KoHo:wght@200&display=swap" rel="stylesheet">
     <script src="javascript/register.js"></script>
 </head>
 <body>
-    <div id="parent">
-        <section class="body"></section>
-         <div class="overlay"></div>
-         </div>
-         <nav id="navbar">
-            <div id="searchbar" name="search your flight">
-                <img src="image/flag.png" alt="">
+    <section class="body">
+        <nav class="navbar h-nav">
+        
+                    <div id="searchbar">
+                         <img src="image/flag.png" alt="">
                     </div>
-     
-             <ul>
-                 <li class="item"><a href="index.html">HOME</a></li>
-                 <li class="item"><a href="service.html">SERVICES</a></li>
-                 <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
-                 <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
-             </ul> 
-         </nav>
-
-         <div class="registerlayer">
-             <div class="registercolorlayer"></div>
-             <img src="image/registerlayer.jpg" alt="image not found">
-         </div>
-         
-
-    <form action="connect.jsp" onsubmit="return validation()" method="post">
-    <div  id="register5">
-
-
-        <div id="reg">
-            
-            <div class="box">
-            <span class="details">Full name</span>   
-            <input type="text" placeholder="Enter your name" class="textbox" autocomplete="off" id="name" name="name">
-            <span id="nameerror" class="error"></span>
-            </div>
-        
-            <div class=" box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Enter your Email" class="textbox" id="mail" autocomplete="off" name="mail">
-            <span id="mailerror" class="error"></span>
-            </div>
-            
-            <div class="box">
-            <span class="details">Mobile Number</span>
-            <input type="text" placeholder="Enter your mob number" class="textbox" id="mobnumber" autocomplete="off" name="number">
-            <span id="moberror" class="error"></span>
-            </div>
-        
-            <div class="box">
-            <span class="details">Password</span>
-            <input type="password" placeholder="Enter your password" class="textbox" id="pass" autocomplete="off" name="password">
-            <span id="passworderror" class="error"></span>
-            </div>
-            
-            <div class="box">
-            <span class="details">Confirm password</span>
-            <input type="password" placeholder="Enter your password again" class="textbox" id="cpass" autocomplete="off" name="confirmpassword">
-            <span id="conpassworderror" class="error"></span>
-            </div>
-           
-
-            <div class="box" id="titleg">
-            <span >Gender</span>
-
-            <label class="container">
-            <input type="radio" name="gender" value="m">Male
-           
-            <input type="radio" name="gender" value="f">Female
-            
-            <input type="radio" name="gender" value="o">Others
-            </label>
-        
-            </div>
-
-            <div class="box"><a href="" ><input id="button" type="submit" value="Register"></div>
-            </div>
-            </div>
-        </form>
     
+                    <ul class="nav v-class">
+                         <li class="item"><a href="index.html">HOME</a></li>
+                         <li class="item"><a href="service.html">SERVICES</a></li>
+                         <li class="item"><a href="about.html">ABOUT&nbspUS</a></li>
+                         <li class="item"><a href="contact.html">CONTACT&nbspUS</a></li>
+                    </ul> 
+    
+                    <div class="burger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+        </nav>
 
-        <div class="registerpatch"></div>
-<!-- ---------------------------------------------FOOTER----------------------------------------------- -->
-
-<div class="footer">
-
-    <div class="footercontent">
-
-        <div id="footerfirst">
-            <h2>Get Help</h2>
-                <ul>
-                <a href="service.html"><li>Services</li></a>
-                <a href="about.html"><li>About Us</li></a>
-                <a href="contact.html"><li>Contact Us</li></a>
-                </ul>
+        <div  class="main-register">  
+            
+        <form action="connect.jsp" onsubmit="return validation()" method="post">
+            <h1 class="box">Register</h1>
+                    <div class="box">
+                    <span class="details">Full name</span>   
+                    <input type="text" placeholder="Enter your name" class="textbox" autocomplete="off" id="name" name="name">
+                    <span id="nameerror" class="error"></span>
+                    </div>
+                
+                    <div class="box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your Email" class="textbox" id="mail" autocomplete="off" name="mail">
+                    <span id="mailerror" class="error"></span>
+                    </div>
+                    
+                    <div class="box">
+                    <span class="details">Mobile Number</span>
+                    <input type="text" placeholder="Enter your mob number" class="textbox" id="mobnumber" autocomplete="off" name="number">
+                    <span id="moberror" class="error"></span>
+                    </div>
+                
+                    <div class="box">
+                    <span class="details">Password</span>
+                    <input type="password" placeholder="Enter your password" class="textbox" id="pass" autocomplete="off" name="password">
+                    <span id="passworderror" class="error"></span>
+                    </div>
+                    
+                    <div class="box">
+                    <span class="details">Confirm password</span>
+                    <input type="password" placeholder="Enter your password again" class="textbox" id="cpass" autocomplete="off" name="confirmpassword">
+                    <span id="conpassworderror" class="error"></span>
+                    </div>
+                   
+        
+                    <div class="box" id="titleg">
+                    <span >Gender</span>
+        
+                    <label class="container">
+                    <input type="radio" name="gender" value="m">Male
+                   
+                    <input type="radio" name="gender" value="f">Female
+                    
+                    <input type="radio" name="gender" value="o">Others
+                    </label>
+                
+                    </div>
+        
+                    <div class="box"><a href="" ><input id="button" type="submit" value="Sign up"></div>
+                    </div>
+            
+                </form>
+            </div>
+            
+      </section>
+    
+    <!-- -----------------footer-------------- -->
+    
+    <div class="footer">
+    
+                <div class="footer-content">
+                <h2>Get Help</h2>
+                    <ul>
+                    <a href="service.html"><li>Services</li></a>
+                    <a href="about.html"><li>About Us</li></a>
+                    <a href="contact.html"><li>Contact Us</li></a>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                <h2>Social Media</h2>
+                   <ul>
+                   <a href="contact.html"><li>Instagram</li></a>
+                   <a href="contact.html"><li>Facebook</li></a>
+                   <a href="contact.html"><li>YouTube</li></a>
+                   <a href="contact.html"><li>Twitter</li></a>
+                   </ul>
+                 </div>  
+         
+    
+               <div class="footer-content">
+            <h2>Payment Methods</h2>
+                <p>
+                     Your data security and privacy is our responsibility
+                </p>
+    
+                <div id="paymenticons">
+                       <img id="paymenttypes" src="image/phonepay.png" alt="image not available">
+                       <img id="paymenttypes" src="image/gpay.png" alt="image not available">
+                       <img id="paymenttypes" src="image/credit.png" alt="image not available">
+                       <img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
+                </div>
         </div>
-
-        <div id="footersecond">
-            <h2>Social Media</h2>
-               <ul>
-               <a href="contact.html"><li>Instagram</li></a>
-               <a href="contact.html"><li>Facebook</li></a>
-               <a href="contact.html"><li>YouTube</li></a>
-               <a href="contact.html"><li>Twitter</li></a>
-               </ul>
+    
     </div> 
-
-    <div class="paymentfooter">
-        <h2>Payment Methods</h2>
-            <div id="message">
-                 Your data security and privacy is our responsibility
-            </div>
-
-            <div id="paymenticons">
-                   <img id="paymenttypes" src="image/phonepay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/gpay.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" src="image/credit.png" alt="image not available">&nbsp&nbsp&nbsp&nbsp&nbsp<img id="paymenttypes" class="paytmspecial" src="image/paytm.png" alt="image not available">
-            </div>
-    </div>
-</div>
-</div>
-
+    <script src="javascript/indexresponsive.js"></script>
+    
 </body>
 </html>
