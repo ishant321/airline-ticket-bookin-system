@@ -622,250 +622,118 @@
 
 /* ----------------------------------------------------PAYMENT------------------------------------------------------------ */
 
-
-
 .payment{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 20%;
-    left: 99px;
-    color: white;
-    z-index: 2;
-   
+    width: 100%;
+    height: 600px;
 }
 
+.payment form{
+    width: 22rem;
+    margin: 8% auto;
+    border: 2px solid rgb(70, 119, 255);
+    background-color: rgba(70, 119, 255, 0.05);
+}
 .payment h1{
+    background-color: rgb(70, 119, 255);
+    width: 100%;
+    font-weight: 400;
+    font-size: 240%;
     text-align: center;
-    padding: 10px 0px 10px 0px;
-    background-color: cornflowerblue;
-    margin: -16px 0px 0px -4px;
-    width: 276px;
 }
-
-.payment h2{
-   text-decoration: underline;
-}
-
-.payment2{
-   padding: 10px;
-}
-
 .payment3{
+    padding: 2%;
+    color: white;
+    margin: 1%;
+}
+.payment3-col{
     display: flex;
-    flex-direction: column;
-    padding-top: 30px;
+   margin-top: 15px;
 }
 
-#card{
-    border: 2px solid white;
-    outline: none;
+.payment3 input{
+    width: 100%;
+    height: 2rem;
     background-color: transparent;
-    padding: 10px;
-    width: 224px;
-}
-#card:hover{
-   border: 2px solid rgb(255, 136, 0);
-}
-
-#date{
-    border: 2px solid white;
-   outline: none;
-   background-color: transparent;
-   padding: 10px 0px 10px 5px;
-   width: 110px;
-}
-#date:hover{
-    border: 2px solid rgb(255, 136, 0);
-}
-
-
-#cv{
-    display: flex;
-    flex-direction: row;
     outline: none;
-    background-color: transparent;
-    width: 110px;
+    border: 1px solid white;
+    transition: 0.2s ease-in-out;
 }
-
-.dateleft{
-    margin-right: 10px;
+.payment3 input:hover{
+    border-color: rgb(70, 119, 255);
 }
-
-
-#code{
-    border: 2px solid white;
-   outline: none;
-   background-color: transparent;
-   padding: 10px;
-   width: 224px;
-}
-
-#code:hover{
-   border: 2px solid rgb(255, 136, 0);
-}
-
-
-#btn{
-   border: none;
-   padding: 10px;
-   background-color: green;
-   font-size: 20px;
-   outline: none;
-   margin-left: -10px;
-}
-
-#btn:hover{
-    background-color: chocolate;
-    color:rgb(255, 255, 255);
-    transition: 0.5s;
-}
-
-.paymentimagelayer{
-    position: absolute;
-    top: 0;
-    margin: 115px 0px 0px 95px;
-    z-index: 2;
-}
-
-.paymentimagelayer img{
-     height: 500px;
-     width: 850px;
-}
-
-.paymentoverlay{
-    height: 500px;
-     width: 276px;
-     background-color: rgba(0, 0, 0, 0.644);
-     position: absolute;
-
-}
-
-#additionaltext{
-    width: 270px;
+.payment-button{
     text-align: center;
-    margin: -11px 0px 0px -12px;
-    font-weight: 100;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px;
 }
-
- 
-
- 
+.payment-button input{
+    width: 10rem; 
+    height: 2rem;
+    margin: auto;
+    border: none;   
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(70, 119, 255);
+    transition: 0.2s all ease-in-out;
+}
+.payment-button input:hover{
+    color: white;
+    background-color: black;
+}
+#additionaltext{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'KoHo', sans-serif;
+    font-size: 80%;
+}
 
 
 
 /* ------------------------------------------------SERVICES----------------------------------------- */
  
-
 .service{
-    position: absolute;
-    margin-top: 200px;
-    
+    height: 600px;
 }
 .service p{
-    font-size: 68px;
-    color:burlywood;
-    
+    font-size: 3rem;
+    color: rgb(55, 158, 255);
+    text-align: center;
+    margin-top: 5%;
+    font-weight: 200;
+    font-family:'Times New Roman', Times, serif;
 }
-
-
 .section100{
     display: flex;
-    margin: 30px;
-    position: absolute;
-    margin: -740px 10px 10px 33px;
+    margin: 3% 2%;
 }
-
-#fst{
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.452);
-    margin: 10px;
-    height: 360px;
-    width: 300px;
-    
+.segments img{
+    height: 43%;
+    margin: auto;
 }
-
-#scnd{
-    border: 2px solid rgba(0, 0, 0, 0.479);
-    background-color: rgba(0, 0, 0, 0.452);
+.segments{
+    border: 1px solid rgb(55, 158, 255);
+    height: 300px;
     margin: 10px;
-    height: 360px;
-    width: 300px;
-   
-}
-
-#thrd{
-    border: 2px solid rgba(0, 0, 0, 0.479);
-    background-color: rgba(0, 0, 0, 0.452);
-    margin: 10px;
-    height: 360px;
-    width: 300px;
-}
-#frth{
-    border: 2px solid rgba(0, 0, 0, 0.479);
-    background-color: rgba(0, 0, 0, 0.452);
-    margin: 10px;
-    height: 360px;
-    width: 300px;
-    
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
 .titl{
-    color: rgb(46, 154, 173);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 6px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
-}
-
-.img{
-    height: 130px;
-    width: 150px;
-    position: absolute;
-    margin-top: 0;
-    padding-left: 74px;
-}
-
-#medikit{
-    height: 80px;
-    width: 100px;
-    padding-top: 20px;
-    padding-left: 93px;
-}
-
-#gift{
-    height: 70px;
-    width: 83px;
-    padding-top: 20px;
-    padding-left: 105px;
-}
-
-#group{
-    height: 70px;
-    width: 83px;
-    padding-top: 20px;
-    padding-left: 105px;
+    margin: 10px;
 }
 .explanation{
-    color: cornsilk;
-    font-family:'Courier New', Courier, monospace;
-    position: relative;
-    display: flex;
-    margin-top: 210px;
+    margin: 10px;
+    font-weight: 200;
 }
-
 
 /* -----------------------------------------------ABOUT US----------------------------------------------------- */
 
 .about{
-    position: absolute;
-    top: 120px;
-    color:rgb(160, 154, 154);
-    display: flex;
-    flex-direction: row;
-    margin-left: 85px;
+   height: 600px;
+   display: flex;
+   color: white;
+   margin: 3% auto;
 }
 
 .about h1{
@@ -873,29 +741,20 @@
     text-decoration-style:dashed;
     color:rgb(49, 171, 192);
 }
-
 .parts{
-    margin: 30px;
+    width: 50%;
+    margin: 5%;
+    height: 70%;    
+    padding: 1%;
+}
+.elements{
+    border: 1px solid rgb(49, 171, 192);
+}
+#element2 ul li::marker{
+    margin-right: 0px;
 }
 
-#element1{
-    display: inline-block;
-    margin: 10px 10px 0px 0px;
-    padding: 10px 10pxx 10px 10px;
-    height: 370px;
-    width: 520px;
-    border: 2px solid black;
-    background-color: rgba(0, 0, 0, 0.466);
-}
 
-#element2{
-    margin: 10px -70px 0px 10px;
-    padding: 10px 0px 10px 20px;
-    height: 350px;
-    width: 500px;
-    border: 2px solid black;
-    background-color: rgba(0, 0, 0, 0.466);
-}
 
 
 
@@ -903,14 +762,21 @@
 
 
 .contactus{
-    position: absolute;
-    top: 0;
-    margin-left: 165px;
-    margin-top: 240px;
+   height: 550px;
     text-align: center;
     color: white;
     font-weight: 100;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10%;
+}
+.contactus h1{
+    text-align: center;
+    margin: 10px;
+}
+.partitions{
+    width: 80%;
+    margin: auto;
+    text-align: center;
 }
 
 .contactus h1::first-letter{
@@ -1002,6 +868,16 @@
     .partition{
         flex-direction: column;
     } 
+    .section100{
+        flex-direction: column;
+    }
+    .segments{
+        width: 98%;
+        margin: auto;
+    }
+    .service{
+        height: 1320px;
+    }
  }
 
  @media only screen and (max-width: 857px){
