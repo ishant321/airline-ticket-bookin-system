@@ -25,12 +25,9 @@ function login()
         document.getElementById('passworderrorlogin').innerHTML="**password can not be blank";
         return false;
     }
-    if((pass.length<=6)||(pass.length>15))
+    if(pass !=="")
     {
-        document.getElementById('passworderrorlogin').innerHTML="**incorrect password";
-        return false;
-    }
-    else{
         document.getElementById('passworderrorlogin').innerHTML="";
     }
+    
 }

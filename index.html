@@ -39,82 +39,58 @@
   <div class="home">  
 
     <div class="homeup">
-        <span class="home-error" id="indexfromerror"></span>
-        <span class="home-error" id="indextoerror"></span>
-        
-        <form action="login.html" onsubmit="return verify()" method="post">
-           <div class="box20">
-                 <select  type="text" class="first20" id="indexfrom">
-                <option  selected disabled hidden>Departure_City</option>
-                <option value="Agartala">Agartala</option>
-                <option value="Bhubaneswar">Bhubaneswar</option>
-                <option value="coimbatore">Coimbatore</option>
-                <option value="Dispur">Dispur</option>
-                <option value="Gaya">Gaya</option>
-                <option value="Goa">Goa</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Imphal">Imphal</option>
-                <option value="Jaipur">Jaipur</option>
-                <option value="Kolkata">Kolkata</option>
-                <option value="Lucknow">Lucknow</option>
-                <option value="Madurai">Madurai</option>
-                <option value="Mumbi">Mumbai</option>
-                <option value="Nagpur">Nagpur</option>
-                <option value="Patna">Patna</option>
-                <option value="Pune">Pune</option>
-                <option value="Ranchi">Ranchi</option>
-                <option value="Shilong">Shilong</option>
-                <option value="Srinagar">Srinagar</option>
-                <option value="Surat">Surat</option>
-                <option value="Thiurvananthapuram">Thiurvananthapuram</option>
-                <option value="Tiruchirappalli">Tiruchirappalli</option>
-                <option value="Tirupati">Tirupati</option>
-                <option value="Udaipur">Udaipur</option>
-                <option value="Vadodara">Vadodara</option>
-                <option value="Varanasi">Varanasi</option>
-                <option value="Vijayawada">Vijayawada</option>
-                <option value="Visakhpatnam">Visakhpatnam</option>  
-                 </select>
-                 
+        <div class="form-ticket">
+          <form action="index.jsp" name="index-ticket-form" onsubmit="return verify()" method="post">
+     
+                 <div class="box1">
+                  <select  type="text" class="first" id="indexfrom" name="Departure_City">
+                    <option  selected disabled hidden>Departure_City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option> 
+                    <option value="Kolkata">Kolkata</option> 
+                    <option value="Mumbai">Mumbai</option> 
+                     </select>
+                     
+                     <select type="text" class="first" id="indexto" name="Arrival_City">
+                    <option  selected disabled hidden>Arrival_City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option> 
+                    <option value="Kolkata">Kolkata</option>  
+                    <option value="Mumbai">Mumbai</option> 
+                     </select>
 
-
-                 <select type="text" class="first20" id="indexto">
-                <option  selected disabled hidden>Arrival_City</option>
-                <option value="Agartala">Agartala</option>
-                <option value="Bhubaneswar">Bhubaneswar</option>
-                <option value="coimbatore">Coimbatore</option>
-                <option value="Dispur">Dispur</option>
-                <option value="Gaya">Gaya</option>
-                <option value="Goa">Goa</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Imphal">Imphal</option>
-                <option value="Jaipur">Jaipur</option>
-                <option value="Kolkata">Kolkata</option>
-                <option value="Lucknow">Lacknow</option>
-                <option value="Madurai">Madurai</option>
-                <option value="Mumbi">Mumbai</option>
-                <option value="Nagpur">Nagpur</option>
-                <option value="Patna">Patna</option>
-                <option value="Pune">Pune</option>
-                <option value="Ranchi">Ranchi</option>
-                <option value="Shilong">Shilong</option>
-                <option value="Srinagar">Srinagar</option>
-                <option value="Surat">Surat</option>
-                <option value="Thiurvananthapuram">Thiurvananthapuram</option>
-                <option value="Tiruchirappalli">Tiruchirappalli</option>
-                <option value="Tirupati">Tirupati</option>
-                <option value="Udaipur">Udaipur</option>
-                <option value="Vadodara">Vadodara</option>
-                <option value="Varanasi">Varanasi</option>
-                <option value="Vijayawada">Vijayawada</option>
-                <option value="Visakhpatnam">Visakhpatnam</option>   
-                 </select>
-                 
-                 
-           </div> 
-                 <input type="submit" class="box30" value="Search your flight" placeholder="Full Name">
-            
-        </form>
+     
+                     <select class="first" id="prefferedseating" name="preffered_seating">
+                      <option  selected disabled hidden>preffered_seating</option>
+                      <option value="economy" class="option">economy</option>
+                      <option value="business" class="option">business</option>
+                      <option value="first_class" class="option">first_class</option>
+                     </select>
+                     
+                
+                     <input type="number" min="0" max="20" class="first" id="adult" placeholder="no. of passengers" name="num_of_passenger">
+                 </div>
+     
+     
+                 <div class="box1">
+                     <p class="placeholder">Deparature Date:</p><input type="date" min="2021-05-30" class="first" id="departuredate">
+                     <p class="placeholder">Return Date:</p><input type="date" min="2021-05-30" class="first" id="returndate">
+                 </div>
+     
+             <div class="ticket-buttons">
+                 <div class="button">
+                  <input type="submit" class="ticket-btn" value="Search your flight" placeholder="Full Name">
+                  <div class="home-error" id="index-error"></div>
+             </div>
+             </div>
+     </form>
+     
+    </div>
+    
     </div>
 
       <div class="homedown">
@@ -127,6 +103,9 @@
     <div class="login-register">
         <a href="login.html"><h2><input type="button" class="indexlogin" value="Log In"></h2></a>
        <a href="register.html"><h2><input type="button" class="indexregister" value="Register"></h2></a>
+     
+      
+
     </div>
 
   </div></section>

@@ -27,9 +27,9 @@ try{
                  dbpassword=rs.getString("password");
 
          if(mail.equals(dbemail) && password.equals(dbpassword)) 
-{
-              session.setAttribute("login", dbemail);
-              response.sendRedirect("ticket.html");
+{ 
+              session.setAttribute("email", dbemail);
+              response.sendRedirect("index.html");
 } 
 
 }
@@ -56,5 +56,5 @@ catch(Exception e){
 <P style="color: white; font-size: 15px">Tap on login button to login again</p>
 <P style="color: white; font-size: 15px">New User?<a href="register.html">SignUp</a></p>
 
-</bod>
+</body>
 </html>

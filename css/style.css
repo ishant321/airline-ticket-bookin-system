@@ -84,50 +84,76 @@
    height: 80%;
    width: 98%;
 }
-.homeup{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 46%;
-    height: 20%;
-    margin: 12px;
-}
 
-.first20{
-    border: none;
-    border-bottom: 2px solid rgb(211 211 211 / 74%);
-    background-color: transparent;
-    outline: none;
-    margin: 10px;
-    margin-right: 0px;
-    width: 47%;
-    font-size: 100%;
-    color: rgb(211 211 211 / 70%);
+
+.home-error{
+    color: rgb(255, 32, 32);
+    margin: 10px 0px -15px 0px;
 }
+/*-----------------------------------------------------------TICKET BOOKING--------------------------------------------------------- */ */
+.homeup{
+    width: 100%;
+    padding: auto;
+} 
 
 .first20 option{
     background-color: rgba(16, 24, 23, 0.555);
 }
-
-.box30{
-    margin-top: 10px;
-    border-radius: 50px;
+.form-ticket{
     width: 100%;
-    height: 40%;
+    margin: 1%;
+    padding: 0px;
+    border: 1px solid burlywood;
+}
+
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1%;
+    width: 90%;
+    margin: auto;
+}
+.first{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    margin: 15px;
+    width: 11rem;
+    color: #7c7c7c;
+}
+.box1 p{
+    color: #7c7c7c;
+}
+.ticket-buttons{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 3%;
+}
+.button{
+    width: 100%;
     text-align: center;
+}
+.ticket-btn{
+    border-radius: 50px;
+    width: 18rem;
+    height: 2rem;
     border: none;
     background-color: rgba(82, 82, 82, 0.562);
     font-family: 'KoHo', sans-serif;
     font-size: 110%;
-    font-weight: 100;
     color: white;
+    transition: 0.3s ease-in-out;
+}
+.ticket-btn:hover{
+    color: skyblue;
+    background-color: rgba(255, 255, 255, 0.281);
 }
 
-.home-error{
-    color: black;
-    margin:auto;
-    background-color: white;
-}
+
 
 .homedown h1{
     font-family: 'KoHo', sans-serif;
@@ -538,87 +564,6 @@
     margin-top: 53px;
 }
 
-/* -----------------------------------------------------------TICKET BOOKING--------------------------------------------------------- */
-
-
-.form-ticket form{
-    width: 40rem;
-    border: 2px solid chartreuse;
-    border-radius: 50px;
-    margin: auto;
-}
-
-.form-ticket h1{
-   color: black;
-   background-color: chartreuse;
-   border-radius: 45px 45px 0px 0px;
-   padding: 0.7rem;
-   font-family: 'KoHo', sans-serif;
-   font-size: 2rem;
-}
-
-.faresystem{
-    color: #7c7c7c;
-    display: flex;
-    width: 100%;
-    margin: auto;   
-    margin-top: 3%;
-}
-.faresystem input{
-    width: 40%;
-    margin: auto;
-    margin-right: 0;
-}
-.faresystem div{
-    display: flex;
-    width: 30%;
-}
-.box1{
-    display: flex;
-    flex-direction: row;
-    padding: 2%;
-}
-.first{
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    width: 50vw;
-    margin: 2%;
-    color: #7c7c7c;
-}
-.box1 p{
-    color: #7c7c7c;
-}
-.ticket-buttons{
-    display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-bottom: 3%;
-}
-.button{
-    width: 100%;
-    text-align: center;
-}
-.ticket-btn{
-    width: 60%;
-    border: none;
-    height: 2.3rem;
-    font-size: 1.6rem;
-    font-weight: 100;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-}
-#btn1{
-    background-color: green;
-}
-#btn2{
-    background-color: rgb(124, 0, 0);
-}
-.ticket-btn:hover{
-    color: black;
-}
-
 
 /* ----------------------------------------------------PAYMENT------------------------------------------------------------ */
 
@@ -970,6 +915,7 @@
     .faresystem{
         display: flex;
         flex-direction: column;
+        width: 22rem;
     }
 }
 @media only screen and (max-width: 440px){

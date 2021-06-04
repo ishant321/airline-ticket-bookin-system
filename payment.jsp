@@ -1,3 +1,12 @@
+<%
+   if(session.getAttribute("email")==null)
+   {
+       response.sendRedirect("index.html");
+   }
+   else
+   {
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,3 +119,6 @@
    
 </body>
 </html>
+<%
+}
+%>
