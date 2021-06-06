@@ -58,7 +58,7 @@ function validation(){
         return false;
      }
 
-     if(mob.length!=4)
+     if(mob.length!=10)
      {
         document.getElementById('moberror').innerHTML="**Enter a valid mobile number";
         return false;
@@ -75,7 +75,7 @@ function validation(){
         return false;
      }
 
-     if((pass.length>6)&&(pass.length<15))
+     if((pass.length<6)&&(pass.length>15))
     {
         document.getElementById('passworderror').innerHTML="**Password must between 5 and 15";
         return false;

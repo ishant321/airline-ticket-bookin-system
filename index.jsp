@@ -40,14 +40,19 @@
     String dc=request.getParameter("Departure_City");
     String ac=request.getParameter("Arrival_City");
     String seating=request.getParameter("preffered_seating");
+         session.setAttribute("class", seating);
     String nop=request.getParameter("num_of_passenger");
+    String date=request.getParameter("ddate");
+    session.setAttribute("dept-date", date);
+    session.setAttribute("nop", nop);
     try{
      Class.forName("com.mysql.jdbc.Driver");
      Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase","root","ishant");
      Statement st=con.createStatement();
      ResultSet rs=st.executeQuery("select flight_company, "+seating+", departure_city, arrival_city, departure_time, arrival_time, available_seats,fare, flight_id from flight_details where departure_city='"+dc+"' and arrival_city='"+ac+"'");
      while(rs.next())
-{    
+{ 
+
 %>
 <table border="1" style="width:100%; align:center; border: 1px solid black; white-space: nowrap; background-color: grey; font-size: 120%;">
 <tbody>
@@ -66,14 +71,14 @@
 
 <tr>
 <td><% session.setAttribute("flight_company" ,rs.getString(1)); out.print(""+rs.getString(1));%></td> 
-<td><% session.setAttribute("flight_number" ,rs.getString(2)); out.print(""+rs.getString(2));%></td> 
-<td><% session.setAttribute("seats" ,rs.getString(3)); out.print(""+rs.getString(3));%></td> 
-<td><% session.setAttribute("departure_city" ,rs.getString(4)); out.print(""+rs.getString(4));%></td> 
-<td><% session.setAttribute("arrival_city" ,rs.getString(5)); out.print(""+rs.getString(5));%></td> 
-<td><% session.setAttribute("departure_time" ,rs.getString(6)); out.print(""+rs.getString(6));%></td> 
-<td><% session.setAttribute("arrival_time" ,rs.getString(7)); out.print(""+rs.getString(7));%></td> 
-<td><% session.setAttribute("available_seats" ,rs.getString(8)); out.print(""+rs.getString(8));%></td> 
-<td><% session.setAttribute("fare" ,rs.getString(9)); out.print(""+rs.getString(9));%></td> 
+<td><% session.setAttribute("seats" ,rs.getString(2)); out.print(""+rs.getString(2));%></td> 
+<td><% session.setAttribute("departure_city" ,rs.getString(3)); out.print(""+rs.getString(3));%></td> 
+<td><% session.setAttribute("arrival_city" ,rs.getString(4)); out.print(""+rs.getString(4));%></td> 
+<td><% session.setAttribute("departure_time" ,rs.getString(5)); out.print(""+rs.getString(5));%></td> 
+<td><% session.setAttribute("arrival_time" ,rs.getString(6)); out.print(""+rs.getString(6));%></td> 
+<td><% session.setAttribute("available_seats" ,rs.getString(7)); out.print(""+rs.getString(7));%></td> 
+<td><% session.setAttribute("fare" ,rs.getString(8)); out.print(""+rs.getString(8));%></td> 
+<td><% session.setAttribute("flight_id" ,rs.getString(9)); out.print(""+rs.getString(9));%></td> 
 
 <td><%
 if(session.getAttribute("email")==null)
@@ -108,7 +113,7 @@ catch(Exception e){
 <p style="color: white; margin-top: 10px; text-align: center;">You need to register or login first to book a ticket</p>
 <div style=" display: flex; align-items: center; justify-content: center; " class="login-register">
         <a href="login.html"><h2><input type="button" class="indexlogin" value="Log In"></h2></a>
-       <a href="register.html"><h2><input type="button" class="indexregister" value="Register"></h2></a>
+       <a href="register.html"><h2><input type="button" onclick="return order()" class="indexregister" value="Register"></h2></a>
     </div>
     <%
 }
@@ -169,7 +174,6 @@ else{
     </div>
 
 </div>
-
 
 <script src="javascript/indexresponsive.js"></script>
 </body>

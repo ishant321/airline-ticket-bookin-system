@@ -3,10 +3,8 @@ function verify(){
   var to=document.getElementById('indexto').value;
   var seating=document.getElementById('prefferedseating').value;
   var n=document.getElementById('adult').value;
-  var ddate=new Date(document.getElementById('departuredate').value);
-  var rdate=new Date(document.getElementById('returndate').value);
   var deptdate=document.getElementById('departuredate').value;
-  var retdate=document.getElementById('returndate').value;
+ 
 
  
 
@@ -68,24 +66,5 @@ function verify(){
     document.getElementById('index-error').innerHTML="";
    }
 
-   if(retdate == "")
-   {
-    document.getElementById('index-error').innerHTML="**Please select your return date";
-    return false;
-   }
-   
-   if(ddate > rdate)
-   {
-    document.getElementById('index-error').innerHTML="**you can not travel reverse";
-    return false;
-   }
-   else{
-    document.getElementById('index-error').innerHTML="";
-   }
-
-   if(retdate!== "")
-   {
-    document.getElementById('index-error').innerHTML="";
-   }
-
+  
 }
