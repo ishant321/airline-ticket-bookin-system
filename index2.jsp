@@ -36,6 +36,7 @@
     </nav>
     <div style="height: 600px; display: flex; align-items:center; justify-content: center; width: 90%; margin: auto; flex-direction: column">
 <%@ page import="java.sql.*" %>
+<%@page import="java.util.*"%>
 <% 
     String dc=request.getParameter("Departure_City");
     String ac=request.getParameter("Arrival_City");
@@ -45,14 +46,22 @@
     String date=request.getParameter("ddate");
     session.setAttribute("dept-date", date);
     session.setAttribute("nop", nop);
+
+
+    String arr[]=new String[2];
+    int i=0;
+    arr[i]=null;
+
     try{
      Class.forName("com.mysql.jdbc.Driver");
      Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase","root","ishant");
      Statement st=con.createStatement();
-     ResultSet rs=st.executeQuery("select flight_company, "+seating+", departure_city, arrival_city, departure_time, arrival_time, available_seats,fare, flight_id from flight_details where departure_city='"+dc+"' and arrival_city='"+ac+"'");
+     ResultSet rs=st.executeQuery("select flight_company, "+seating+", departure_city, arrival_city, departure_time, arrival_time, fare, flight_id, available_"+seating+" from flight_details where departure_city='"+dc+"' and arrival_city='"+ac+"'");
+
+
      while(rs.next())
 { 
-
+   
 %>
 <table border="1" style="width:100%; align:center; border: 1px solid black; white-space: nowrap; background-color: grey; font-size: 120%;">
 <tbody>
@@ -63,22 +72,22 @@
 <th>Arrival_City</th>
 <th>Departure_time</th>
 <th>Arrival_time</th>
-<th>Avlailable seats</th>
 <th>Fare</th>
 <th>flight id</th>
+<th><% out.print("available seats");%></th>
 </tr>
 
 
 <tr>
-<td><% session.setAttribute("flight_company" ,rs.getString(1)); out.print(""+rs.getString(1));%></td> 
-<td><% session.setAttribute("seats" ,rs.getString(2)); out.print(""+rs.getString(2));%></td> 
-<td><% session.setAttribute("departure_city" ,rs.getString(3)); out.print(""+rs.getString(3));%></td> 
-<td><% session.setAttribute("arrival_city" ,rs.getString(4)); out.print(""+rs.getString(4));%></td> 
-<td><% session.setAttribute("departure_time" ,rs.getString(5)); out.print(""+rs.getString(5));%></td> 
-<td><% session.setAttribute("arrival_time" ,rs.getString(6)); out.print(""+rs.getString(6));%></td> 
-<td><% session.setAttribute("available_seats" ,rs.getString(7)); out.print(""+rs.getString(7));%></td> 
-<td><% session.setAttribute("fare" ,rs.getString(8)); out.print(""+rs.getString(8));%></td> 
-<td><% session.setAttribute("flight_id" ,rs.getString(9)); out.print(""+rs.getString(9));%></td> 
+<td><%  out.print(""+rs.getString(1));%></td> 
+<td><%  out.print(""+rs.getString(2));%></td> 
+<td><%  out.print(""+rs.getString(3));%></td> 
+<td><%  out.print(""+rs.getString(4));%></td> 
+<td><%  out.print(""+rs.getString(5));%></td> 
+<td><%  out.print(""+rs.getString(6));%></td>  
+<td><%  out.print(""+rs.getString(7));%></td> 
+<td><%  out.print(""+rs.getString(8)); arr[i]=rs.getString(8);%></td> 
+<td><%  out.print(""+rs.getString(9));%></td> 
 
 <td><%
 if(session.getAttribute("email")==null)
@@ -87,8 +96,8 @@ if(session.getAttribute("email")==null)
 <a href="login.html"><button style="width: 100%; background-color: lightgreen;  font-size: 120%;">Book</button></a>
 <%}
 else{
-    %>
-    <a href="order.jsp"><button style="width: 100%; background-color: lightgreen;  font-size: 120%;">Book</button></a>
+ %>
+    <a href="order<%out.print(""+i);%>.jsp"><button style="width: 100%; background-color: lightgreen;  font-size: 120%;">Book</button></a>
 <% 
 }
 %>
@@ -97,8 +106,17 @@ else{
 </tbody>
 </table>
 <%
-    
+
+     
+
+    i++;
+
+
 }
+     session.setAttribute("flight_id1", arr[0]);
+
+ session.setAttribute("flight_id2", arr[1]);
+
     }
 
 

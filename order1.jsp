@@ -36,8 +36,33 @@
                 </div>
     </nav>
     
-
+<%@ page import="java.sql.*" %>
          <%
+
+    String fid2=(String)session.getAttribute("flight_id2");
+    String fclasses=(String)session.getAttribute("class");
+    
+
+    try{
+     Class.forName("com.mysql.jdbc.Driver");
+     Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase","root","ishant");
+     Statement st=con.createStatement();
+     ResultSet rs=st.executeQuery("select flight_company, "+fclasses+", departure_city, arrival_city, departure_time, arrival_time, fare, flight_id, available_"+fclasses+" from flight_details where flight_id='"+fid2+"'");
+     
+     rs.next();
+     session.setAttribute("flight_company", rs.getString(1));
+     session.setAttribute("seats", rs.getString(2));
+     session.setAttribute("departure_city", rs.getString(3));
+     session.setAttribute("arrival_city", rs.getString(4));
+     session.setAttribute("departure_time", rs.getString(5));
+     session.setAttribute("arrival_time", rs.getString(6));
+     session.setAttribute("fare", rs.getString(7));
+     session.setAttribute("flight_id", rs.getString(8));
+     session.setAttribute("available_seats", rs.getString(9));
+
+   
+
+
   String fc=(String)session.getAttribute("flight_company");
    String fid=(String)session.getAttribute("flight_id");
   String se=(String)session.getAttribute("seats");
@@ -45,12 +70,15 @@
   String ac=(String)session.getAttribute("arrival_city");
   String dt=(String)session.getAttribute("departure_time");
   String at=(String)session.getAttribute("arrival_time");
+
   int fr=Integer.parseInt((String)session.getAttribute("fare"));
   int nop=Integer.parseInt((String)session.getAttribute("nop"));
+  int availseats=Integer.parseInt((String)session.getAttribute("available_seats")); 
    
   
 %> 
-<form action="payment.jsp" onsubmit="return check()" method="post">
+
+ <form action="payment.jsp" onsubmit="return check()" method="post">
 <div class="order">
 <div class="order-content">
       <h1>Ticket Form</h1>
@@ -75,7 +103,14 @@
 </div>
 <div id="order-error"></div>
 </div>
-</form>
+</form>  
+
+<%
+ }
+    catch(Exception e){
+         out.print(e);
+    }
+%>
 
  </section>
 

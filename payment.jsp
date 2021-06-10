@@ -105,12 +105,41 @@
      else{
          out.println("Registration failed.....");
      }
+
          }
 
          catch(Exception e){
               out.println(e);
          }
          
+    %>
+
+    <%
+            int availseats=Integer.parseInt((String)session.getAttribute("available_seats"));
+   
+   int finalavail=availseats-nop;
+
+    try{
+       Class.forName("com.mysql.jdbc.Driver");
+     Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase","root","ishant");
+     PreparedStatement ps5=conn.prepareStatement("update flight_details set available_"+(String)session.getAttribute("class")+"="+finalavail+" where flight_id = '"+fid+"'");
+
+     int x=ps5.executeUpdate();
+
+     if(x>0)
+     {
+         out.println("");
+
+     }
+     else{
+         out.println("updation failed.....");
+     }
+
+  }
+    catch(Exception e){
+        out.println(e);
+    }
+    
     %>
         
         <div id="pay-error"></div>
